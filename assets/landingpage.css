@@ -268,3 +268,34 @@
     color: #4a5568; 
     margin-top: 8px;
   }
+  .cardd{
+    width: 600px;
+    height: 530px;
+    color: white;
+    background-image: url(/assets/Images/backkk.png);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 30px;
+   }
+  
+   .cardd2{
+    width: 600px;
+    height: 530px;
+    color: white;
+    background-image: url(/assets/Images/back.png);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 30px;
+   }
+   .fli{
+    margin-top: 80px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 80px;
+   }
