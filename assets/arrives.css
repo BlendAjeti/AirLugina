@@ -91,3 +91,112 @@ body{
     margin: 20px 104px;
 }
 
+
+
+.destinations{
+    font-family: ClashDisplay-Regular;
+    margin: 20px 0;
+}
+
+.destinations span{
+    font-family: ClashDisplay-Regular;
+    color:#FF8682;
+    
+}
+
+
+.plane-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plane-type h2{
+    font-family: ClashDisplay-Light;
+}
+
+.plane-type span{
+    color: #FF8682;
+}
+
+.location{
+    margin: 20px 0;
+    display: flex;
+    font-family: ClashDisplay-Regular;
+
+}
+
+.location img{
+    padding-right: 4px;
+    width: 14px;
+}
+
+.location-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.btn button{
+    width: 150px;
+    height: 48px;
+    background-color: #FF3D00;
+    color: #ffffff;
+    font-family: ClashDisplay-SemiBold;
+    border: none;
+    border-radius: 5px;
+}
+
+.big-plane{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-plane img{
+    width: 2120px;
+}
+
+.h2-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ClashDisplay-ExtraLight;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.policies{
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.emirates h2{
+    font-size: 24px;
+    font-family: ClashDisplay-Light;
+    padding: 10px;
+}
+
+.pre-flight{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.cleaning{
+    display: flex;
+    font-family: ClashDisplay-Regular;
+    margin: 10px;
+}
+
