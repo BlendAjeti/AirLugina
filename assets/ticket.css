@@ -1,0 +1,432 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    /* font-family: ClashDisplay-Regular; */
+}
+
+body{
+    background-color:#fafbfc ;
+}
+
+.container{
+    /* margin: 15px 104px; */
+
+}
+
+.navbar{
+    /* margin: 15px 104px; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    height: 87px;
+
+
+    
+}
+
+
+
+.navbar-elements{
+    margin: 0 104px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .logo img{
+    width: 195px;
+    height: 49px;
+
+}
+
+
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+
+
+.user-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+}
+
+.user-img img{
+    margin-right: 10px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.arrow-down img{
+    width: 20px;
+    padding-top: 3px;
+
+}
+.direction{
+    margin:  20px 95px;
+    font-family: ClashDisplay-Regular;
+}
+.direction span{
+    color: #112211;
+    padding: 0 10px;
+    font-family: ClashDisplay-Semibold;
+}
+
+.emirate{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 104px;
+    font-family: ClashDisplay-Light;
+
+}
+
+.emirate .money{
+    font-family: ClashDisplay-Semibold;
+}
+
+.loc{
+    display: flex;
+    margin: 20px 104px;
+    font-family: ClashDisplay-Regular;
+}
+
+.loc img{
+    padding-right: 7px;
+}
+.ticket-box{
+    width: 1200px;
+    margin: 40px auto;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    border-radius: 10px;
+
+}
+
+.time img{
+    padding: 0 30px;
+}
+
+.boarding-num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background-color:#FF3D00;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+
+    
+}
+
+
+
+
+.b-number h3{
+    font-family: ClashDisplay-Regular;
+    color: #112211;
+    font-size: 20px;
+}
+
+.b-number p{
+    font-family: ClashDisplay-Regular;
+    color: #112211;
+    font-size: 14px;
+}
+
+.bussines-class p{
+    font-family: ClashDisplay-Extralight;
+    color: #112211;
+    font-size: 14px;
+}
+
+
+.code-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.date-container{
+    display: flex;
+    font-family: ClashDisplay-Regular;
+}
+.date-vector img{
+    padding-right: 7px;
+}
+.class-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: ClashDisplay-Regular;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.terms{
+    margin: 20px 104px;
+}
+
+.conditions{
+    padding: 30px 0;
+    font-size: 20px;
+    font-family: ClashDisplay-Regular;
+    text-decoration: underline;
+}
+
+.payments h2{
+    font-family: ClashDisplay-Regular;
+    font-size: 18px;
+    padding:20px 0;
+}
+
+
+.payments ul{
+    margin-left: 40px;
+}
+
+
+.payments li{
+    color: #112211;
+    font-family: ClashDisplay-Light;
+    padding: 10px 0;
+}
+
+
+.contact-us h2{
+    
+    font-family: ClashDisplay-Regular;
+    font-size: 18px;
+    padding:20px 0;
+}
+
+.contact-us p{
+    color: #112211;
+    font-family: ClashDisplay-Light;
+    padding: 2px 0;
+}
+.space{
+    height: 120px;
+}
+.footer{
+    width: 100%;
+    height: 282px;
+    background-color:#F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.our-destinations{
+    font-family: ClashDisplay-Regular;
+}
+.our-destinations h4{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 10px;
+}
+.our-destinations p{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 5px;
+}
+.lugina-logo img{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 20px;
+}
+
+
+@media only screen 
+and (max-width : 767px){
+    .navbar{
+        width: 100%;
+
+    }
+    .user-logo {
+        display: none;
+    }
+    .flights {
+        display: none;
+    }
+    
+.direction{
+    margin: 20px;
+    display: inline;
+    text-align: center;
+    font-family: ClashDisplay-Regular;
+}
+.direction span{
+    color: #112211;
+    padding: 0;
+    font-family: ClashDisplay-Semibold;
+}
+
+.emirate{
+    display: block;
+    margin: 20px 104px;
+    font-family: ClashDisplay-Light;
+    text-align: center;
+
+}
+
+.emirate .money{
+    font-family: ClashDisplay-Semibold;
+}
+
+.loc{
+    text-align: center;
+    display: inline-block;
+    margin: 20px 104px;
+    font-family: ClashDisplay-Regular;
+}
+
+.loc img{
+    padding-right: 7px;
+    width: 20px;
+    height: 20px;
+}
+
+.ticket-box{
+    width: 90%;
+    margin: 40px auto;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    border-radius: 10px;
+
+}
+
+.time img{
+    padding: 0 30px;
+}
+
+.boarding-num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background-color:#FF3D00;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+
+    
+}
+
+
+
+
+.b-number h3{
+    font-family: ClashDisplay-Regular;
+    color: #112211;
+    font-size: 20px;
+}
+
+.b-number p{
+    font-family: ClashDisplay-Regular;
+    color: #112211;
+    font-size: 14px;
+}
+
+.bussines-class p{
+    font-family: ClashDisplay-Extralight;
+    color: #112211;
+    font-size: 14px;
+}
+
+
+.code-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr ;
+    gap: 20px;
+    padding: 30px 50px;
+}
+
+.date-container{
+    display: flex;
+    font-family: ClashDisplay-Regular;
+}
+.date-vector img{
+    padding-right: 7px;
+}
+.class-2{
+    display: block;
+    padding: 20px 40px;
+    font-family: ClashDisplay-Regular;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time img{
+    width: 60px;
+}
+.time h1{
+    font-size: 20px;
+}
+.time p{
+    font-size: 14px;
+}
+
+
+.ek{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ek p{
+    font-size: 15px;
+}
+
+.code{
+    margin-top: 10px;
+    text-align: center;
+}
+.estimated-time{
+    width: 70px;
+}
+}
