@@ -200,3 +200,60 @@ body{
     margin: 10px;
 }
 
+
+
+.cleaning img{
+    padding-right: 5px;
+}
+
+.date{
+    margin: 10px 0;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+}
+
+
+
+.return-date{
+    padding-top: 20px;
+    font-family:ClashDisplay-Light;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.plane-accesories{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.plane-arrive{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.newark{
+    display: flex;
+    align-items: center;
+}
+
+
+.newark p{
+    padding-left: 20px;
+    font-family: ClashDisplay-Regular;
+}
+
+.newark h2{
+    padding-left: 24px;
+    font-family: ClashDisplay-Medium;
+}
+
+.space{
+    height: 120px;
+}
