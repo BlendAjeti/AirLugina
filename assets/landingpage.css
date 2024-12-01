@@ -299,3 +299,31 @@
     gap: 20px;
     margin-bottom: 80px;
    }
+   
+ .foot{
+  
+    background-color:#F3F3F3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   .footer{
+      width: 1440px;
+      height: 282px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .our-destinations h4{
+      
+      padding-bottom: 10px;
+  }
+  .our-destinations p{
+      
+      padding-bottom: 5px;
+  }
+  .lugina-logo img{
+      
+      padding-bottom: 20px;
+  }
