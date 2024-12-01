@@ -190,3 +190,126 @@ body{
     padding: 12px;
     border-radius: 4px;
 }
+
+.emirates{
+    width: 1500px;
+    background-color: #ffffff; 
+    border: 7px;
+    margin:  40px 95px;
+    font-family: ClashDisplay-Regular;
+    /* display: flex; */
+    display: flex;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+}
+.very-good{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.reviews{
+    display: flex;
+    align-items: center;
+}
+.ctn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nonstop{
+    display: flex;
+    align-items: center;
+}
+.nonstop-2{
+    display: flex;
+    align-items: center;
+}
+
+
+.numbers{
+    border: 2px solid #FF3D00;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.numbers p{
+    padding: 10px;
+    font-family: ClashDisplay-Semibold;
+}
+.paragraf span{
+    font-family: ClashDisplay-Semibold;
+    padding-right: 5px;
+}
+.paragraf{
+    font-family: ClashDisplay-Regular;
+    padding-left: 8px;
+}
+
+.second-ctn{
+    margin: 20px;
+}
+.second-ctn p{
+    font-size: 14px;
+}
+.price p{
+    color: #FF3D00;
+    font-size: 22px;
+    float: right;
+    font-family: ClashDisplay-Bold;
+}
+
+.nonstop{
+    margin-bottom: 20px;
+}
+
+.nonstop-2{
+    margin-bottom: 20px;
+}
+.bord{
+    border-bottom: 1px solid #112211;
+    margin-bottom: 20px;
+}
+.nonstop input{
+    width: 18px;
+    height: 18px;
+}
+.nonstop-2 input{
+    width: 18px;
+    height: 18px;
+}
+
+.nonstop span{
+    font-family: ClashDisplay-Semibold;
+    padding-left: 15px;
+}
+
+.pa{
+    padding-left: 15px; 
+    font-family: ClashDisplay-Light;
+}
+.nonstop-2 span{
+    font-family: ClashDisplay-Semibold;
+    padding-left: 15px;
+}
+
+.nonstop .pad{
+    padding-left: 30px;
+}
+.nonstop-2 .pad{
+    padding-left: 30px;
+}
+
+.EWR{
+    padding-left: 60px;
+}
+.details-btn button{
+    width: 100%;
+    padding: 10px;
+    background-color: #FF3D00;
+    color: #ffffff;
+    font-family: ClashDisplay-Regular;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
