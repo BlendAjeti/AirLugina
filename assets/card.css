@@ -387,3 +387,283 @@ fieldset legend{
 .space{
     height: 120px;
 }
+
+.footer{
+    width: 100%;
+    height: 282px;
+    background-color:#F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.our-destinations{
+    font-family: ClashDisplay-Regular;
+}
+.our-destinations h4{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 10px;
+}
+.our-destinations p{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 5px;
+}
+.lugina-logo img{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+@media only screen 
+and (max-width : 767px){
+    .navbar{
+        width: 100%;
+
+    }
+    .user-logo {
+        display: none;
+    }
+    .flights {
+        display: none;
+    }
+
+    .direction{
+        display: inline;
+        font-size: 13px;
+    }
+
+    
+
+    .e-logo img{
+        width: 120px;
+    }
+    .wifi-logo img{
+        width: 120px;
+    }
+    .plane-direction img{
+        width: 100px;
+        padding: 20px 0;
+    }
+
+    .ticket-price{
+        display: block;
+        width: 400px;
+        margin: 20px 50px;
+    }
+
+    .ticket{
+        width: 270px;
+        /* height: 300px; */
+    }
+    .S240 h1 span{
+        color: #FF8682;
+        font-size: 24px;
+        font-family: ClashDisplay-Semibold;
+    }
+    .emirate{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .plane-arrive{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .newark h2{
+        font-family: ClashDisplay-Semibold;
+        font-size: 15px;
+        padding-right: 18px;
+    }
+    .newark p{
+        font-size: 14px;
+    }
+
+
+    .price-fee{
+        width: 270px;
+        margin: 20px 0;
+    }
+
+    .plane-img img{
+        width: 70px;
+    }
+    .economy h3{
+        font-size: 14px;
+    }
+    .economy p{
+        font-size: 14px;
+    }
+
+    #karta{
+        display: inline;
+    }
+
+    .new-card{
+        width: 300px;
+        height: 480px;
+        margin:0 15px ;
+    }
+    .big-text h1{
+        font-size: 20px;
+    }
+    .x-img img{
+        padding-top: 5px;
+        width: 14px;
+    }
+
+    .c-number{
+        width: 100%;
+        
+    }
+
+    .form-group{
+        width: 100%;
+        display: flex;
+        font-family: ClashDisplay-Regular;
+        font-size: 14px;
+    }
+    .form-group input{
+        width: 50%;
+        margin: 7px 10px 10px 10px;
+    }
+
+    
+    .space{
+        display: none;
+    }
+
+    .footer{
+        height: 100%;
+        width: 100%;
+
+    }
+    
+    .our-destinations{
+        
+        display: none;
+    }
+    .our-destinations h4{
+        display: none;
+    }
+    .our-destinations p{
+        display: none;
+    }
+    .air-img img{
+        width: 90px;
+        padding-bottom: 10px;
+
+    }
+    .social-medias img{
+        width: 90px;
+    }
+    .lugina-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    
+    .direction{
+
+        margin: 20px 50px;
+    }
+    
+    .ticket-price{
+        margin:  0 20px;
+        display: block;
+    }
+    .ticket{
+        width: 600px;
+        height: 250px;
+        margin:20px 40px ;
+    }
+    .plane-accesories img{
+        width: 200px;
+    }
+    .plane-direction img{
+        width: 100px;
+    }
+    .newark h2{
+        font-size: 20px;
+    }
+
+    .price-fee{
+        margin:40px 120px 0 120px ;
+    }
+
+    #karta{
+        display: inline;
+    }
+
+    .new-card{
+        width: 600px;
+        height: 420px;
+        margin:20px 40px;
+    }
+    .c-number{
+        width: 100%;
+        
+    }
+
+    .form-group{
+        width: 100%;
+        display: flex;
+        font-family: ClashDisplay-Regular;
+        font-size: 14px;
+    }
+    .form-group input{
+        width: 272px;
+        margin: 7px 10px 10px 10px;
+    }
+
+    .space{
+        display: none;
+    }
+
+    .footer{
+        height: 100%;
+        width: 100%;
+
+    }
+    
+    .our-destinations{
+        
+        display: none;
+    }
+    .our-destinations h4{
+        display: none;
+    }
+    .our-destinations p{
+        display: none;
+    }
+    .air-img img{
+        width: 140px;
+        padding-bottom: 10px;
+
+    }
+    .social-medias img{
+        width: 140px;
+    }
+    .lugina-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+}
