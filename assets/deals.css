@@ -1,0 +1,62 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color:#fafbfc ;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    /* margin: 15px 104px; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    height: 87px;  
+}
+
+.navbar-elements{
+    margin: 0 104px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .logo img{
+    width: 195px;
+    height: 49px;
+}
