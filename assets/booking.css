@@ -67,3 +67,133 @@ body{
 
 }
 
+
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+
+
+.user-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+}
+
+.user-img img{
+    margin-right: 10px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.arrow-down img{
+    width: 20px;
+    padding-top: 3px;
+
+}
+
+.depart{
+    width: 1500px;
+    background-color: #ffffff; 
+    border: 7px;
+    margin:  40px 95px;
+    font-family: ClashDisplay-Regular;
+    /* display: flex; */
+    height: 100px;
+    display: flex;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+}
+
+.depart form{
+    display: flex;
+    align-items: center;
+    margin: 0 200px;
+}
+
+
+.from fieldset{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.from fieldset input{
+    border: none;
+    font-family: ClashDisplay-Semibold;
+    padding: 12px;
+    
+}
+.from fieldset img{
+    padding-right: 10px;
+}
+
+.trip fieldset{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.trip fieldset select{
+    border: none;
+    padding: 12px;
+    font-family: ClashDisplay-Semibold;
+}
+
+.return fieldset{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.return fieldset input{
+    border: none;
+    font-family: ClashDisplay-Semibold;
+    padding: 12px;
+    
+}
+
+.passanger fieldset{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.passanger fieldset input{
+    border: none;
+    font-family: ClashDisplay-Semibold;
+    padding: 12px;
+    
+}
+
+.search button{
+    background-color:#FF3D00;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+}
