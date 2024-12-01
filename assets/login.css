@@ -1,0 +1,165 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(/OTF/ClashDisplay-SemiBold.otf);
+}
+*{
+    font-family:  ClashDisplay-Regular;
+}
+.container{
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.container img{
+    float: right;
+    height: 600px;
+    padding: 20px;
+    padding-right: 120px;
+}
+
+.container .AirLugina{
+    float: left;
+    height: 50px;
+    padding-top: 50px;
+    padding-left: 120px;
+}
+
+.container h1{
+    padding-top: 50px;
+    padding-left: 120px;
+}
+
+.p1{
+    padding-left: 120px;
+}
+
+.table{
+    padding-left: 120px;
+    width: 420px;
+    color: white;
+}
+
+
+.inputbox {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 20px 0;
+    position: relative;
+    border-radius: 40px;
+}
+
+.inputbox input {
+    width: 100%; 
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    opacity: 80%;
+    border: none;
+    outline: none;
+}
+
+.inputbox input::placeholder {
+    color: black;
+}
+
+.remember {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #FF3D00;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #FF3D00;
+    color: azure;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.register a {
+    color: #FF3D00;
+    text-decoration: none;
+}
+
+.remember a{
+    color: #FF3D00;
+    text-decoration: none;
+}
+
+.register p{
+    color: black;
+}
+
+.inputbox i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-15%);
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+
+
+.fieldset{
+    color: black;
+    border-radius: 10px;
+}
+
+.fieldset.error {
+    border: 2px solid red;
+    color: red;
+}
+
+
+.inputbox input.error::placeholder {
+    color: red;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+
