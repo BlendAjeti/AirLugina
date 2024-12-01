@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ClashDisplay-Regular;
+  }
+
+  @font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+  
+ 
+  body {
+    background-color: #FAFBFC ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+
+  .hero {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    height: 50vh;
+    background: url('/assets/Images/backroung.png') center/cover no-repeat;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+  }
+
+  .navbar .left-nav a {
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .sig {
+    background-color: white;
+    color: rgb(25, 35, 44);
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .sig a{
+    text-decoration: none;
+    color: black;
+  }
+  .sig a:hover{
+    text-decoration: none;
+    color: white;
+  }
+  .log{
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+  .log a{
+    text-decoration: none; 
+    color: white;
+  }
+
+  .log a:hover{
+    color: black;
+  }
+  
+  .log:hover {
+    background-color: white;
+    border-color: white;
+    color: black;
+  }
+  .sig:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+  }
+
+  .hero h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
