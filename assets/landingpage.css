@@ -215,3 +215,56 @@
   .submit-btn:hover {
     background-color: #ff5722;
   }
+  
+  .offerts{
+    width: 1200px;
+    
+  }
+  .tit{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+
+  .cards{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .card {
+    display: flex;
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    padding: 16px;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 30%; 
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-title {
+    font-size: 1.25rem; 
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .card-text {
+    color: #4a5568; 
+    margin-top: 8px;
+  }
