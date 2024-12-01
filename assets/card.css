@@ -66,3 +66,173 @@ body{
     height: 49px;
 
 }
+
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+
+
+.user-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+}
+
+.user-img img{
+    margin-right: 10px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.arrow-down img{
+    width: 20px;
+    padding-top: 3px;
+
+}
+
+.direction{
+    margin:  20px 104px;
+    font-family: ClashDisplay-Regular;
+}
+.direction span{
+    color:#FF8682;
+    padding: 0 10px;
+}
+.ticket-price{
+    margin:  20px 104px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket{
+    width: 930px;
+    background-color: #ffffff;
+    padding: 15px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    height: 300px;
+}
+.airbus h1{
+    font-size: 24px;
+    font-family: ClashDisplay-ExtraLight;
+}
+.S240 h1 span{
+    color: #FF8682;
+    font-size: 32px;
+    font-family: ClashDisplay-Semibold;
+}
+.emirate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.return{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+}
+.return p{
+    font-family: ClashDisplay-Regular;
+    color: #112211;
+}
+
+.plane-accesories{
+    display: flex;
+    justify-content: space-between;
+}
+.plane-arrive{
+    display: flex;
+    justify-content: space-between;
+    padding-top:30px;
+}
+
+.newark{
+    display: flex;
+    align-items: center;
+}
+
+.newark h2{
+    font-family: ClashDisplay-Semibold;
+    font-size: 24px;
+    padding-right: 18px;
+}
+.newark p{
+font-family: ClashDisplay-Regular;
+}
+
+.price-fee{
+
+    width: 450px;
+    height: 360px;
+    background-color: #ffffff;
+    padding: 15px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    /* margin-left: 100px; */
+}
+
+.pricee{
+    margin: 10px;
+}
+.ecoonomyf{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:1px solid #112211;
+    padding-bottom: 10px;
+
+}
+
+
+.economy p{
+    font-family: ClashDisplay-Regular;
+}
+.economy h3{
+    font-family: ClashDisplay-Semibold;
+}
+
+.getobe p{
+    font-family: ClashDisplay-Regular;
+    padding: 10px 0;
+    border-bottom:1px solid #112211;
+}
+.price-details p{
+    font-family: ClashDisplay-Regular;
+    padding: 10px 0;
+}
+.discount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.d p{
+    font-family: ClashDisplay-Regular;
+    padding: 10px 0;
+}
+.d-price p{
+    font-family: ClashDisplay-Semibold;
+}
+.service-fee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #112211;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
