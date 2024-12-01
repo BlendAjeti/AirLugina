@@ -236,3 +236,154 @@ font-family: ClashDisplay-Regular;
     align-items: center;
     padding: 10px 0;
 }
+
+.add-new{
+    margin:  20px 104px;
+
+}
+
+.new-card{
+    width: 900px;
+    background-color: #ffffff;
+    padding: 30px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    height: 420px;
+}
+
+.big-text{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.big-text h1{
+    font-family: ClashDisplay-Regular;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-container form{
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+}
+.c-number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 904px;
+    
+}
+.c-number fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+    color: #112211;
+
+}
+.c-number fieldset img{
+    padding: 5px 10px 10px 10px;
+}
+.c-number fieldset input{
+    margin: 7px 10px 10px 10px; 
+    border: none;
+    width: 100%;
+    font-family: ClashDisplay-Regular;
+
+}
+.form-group{
+    width: 100%;
+    display: flex;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+}
+.form-group input{
+    border: none;
+    width: 423px;
+    margin: 7px 10px 10px 10px;
+    font-family: ClashDisplay-Regular;
+}
+.fieldseti{
+    margin-right: 10px;
+}
+
+.name-on-card fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+    color: #112211;
+}
+
+.name-on-card input{
+    margin: 7px 10px 10px 10px; 
+    border: none;
+    width: 100%;
+    font-family: ClashDisplay-Regular;
+}
+.selecti fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+    color: #112211;
+}
+.selecti fieldset select{
+    margin: 7px 10px 10px 10px; 
+    border: none;
+    width: 100%;
+    font-family: ClashDisplay-Regular;
+} 
+
+.checkbox{
+    margin: 15px 0;
+    font-family: ClashDisplay-Semibold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label{
+    padding-left: 7px;
+}
+
+.form-container form button{
+    width: 100%;
+    padding: 9px;
+    background-color: #FF3D00;
+    color: #ffffff;
+    border: none;
+    border-radius:4px;
+    font-family: ClashDisplay-Semibold;
+    margin: 10px 0;
+}
+
+.paragraph{
+    text-align: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+}
+
+fieldset legend{
+    padding-left: 5px;
+}
+
+.space{
+    height: 120px;
+}
