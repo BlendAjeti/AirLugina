@@ -66,3 +66,191 @@ body{
     height: 49px;
 
 }
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+
+
+.user-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+}
+
+.user-img img{
+    margin-right: 10px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.arrow-down img{
+    width: 20px;
+    padding-top: 3px;
+
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-container form{
+    width: 640px;
+    height: 649px;
+}
+
+.form-group{
+    display: flex;
+    margin-bottom: 20px;
+}
+.c-number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.c-number fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+    color: #112211;
+
+}
+.c-number fieldset img{
+    padding: 5px 10px 10px 10px;
+}
+.c-number fieldset input{
+    margin: 7px 10px 10px 10px; 
+    border: none;
+    width: 100%;
+    font-family: ClashDisplay-Regular;
+    background-color:#fafbfc;
+
+}
+.form-group{
+    display: flex;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+}
+.form-group input{
+    border: none;
+    width: 283px;
+    margin: 7px 10px 10px 10px;
+    font-family: ClashDisplay-Regular;
+    background-color:#fafbfc;
+    padding: 5px;
+}
+.fieldseti{
+    margin-right: 10px;
+}
+
+.form-group input:focus{
+    outline: none; 
+    border: none;  
+}
+
+.name-on-card fieldset{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    font-size: 14px;
+    color: #112211;
+    margin-bottom: 20px;
+}
+
+.name-on-card input{
+    margin: 7px 10px 10px 10px; 
+    border: none;
+    width: 100%;
+    font-family: ClashDisplay-Regular;
+    padding: 5px;
+    background-color:#fafbfc;
+}
+
+.form-container form button{
+    width: 643px;
+    padding: 11px;
+    background-color: #FF3D00;
+    color: #ffffff;
+  
+    border: none;
+    border-radius:4px;
+    font-family: ClashDisplay-Semibold;
+    margin: 10px 0 20px 0;
+}
+.name-on-card input:focus{
+    outline: none; 
+    border: none;  
+}
+
+.upload-images{
+    width: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    background-color:#8DD3BB;
+    color: black;
+    border: none;
+    border-radius:4px;
+    font-family: ClashDisplay-Semibold;
+    margin: 20px 0;
+    
+}
+.upload-images img{
+    padding-right: 10px;
+}
+.paragraph{
+    text-align: center;
+    font-family: ClashDisplay-Semibold;
+    font-size: 14px;
+}
+
+.paragraph span a{
+    color: #FF3D00;
+    text-decoration: none;
+}
+
+fieldset legend{
+    padding-left: 5px;
+}
+
+.s-upload{
+    margin: 0 300px 0;
+    width: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload{
+    margin: 100px 0 30px 0;
+    /* margin-left: 533px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:#8DD3BB ;
+    width: 189px;
+    height: 48px;
+    font-family: ClashDisplay-Regular;
+    border-radius:4px ;
+}
+
+.upload img{
+    padding: 0 8px;
+}
