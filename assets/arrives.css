@@ -52,3 +52,42 @@ body{
     width: 195px;
     height: 49px;
 }
+
+
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+
+
+.user-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+}
+
+.user-img img{
+    margin-right: 10px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.arrow-down img{
+    width: 20px;
+    padding-top: 3px;
+
+}
+
+
+.section-container{
+    margin: 20px 104px;
+}
+
