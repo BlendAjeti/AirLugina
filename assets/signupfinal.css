@@ -1,0 +1,196 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(/OTF/ClashDisplay-SemiBold.otf);
+}
+*{
+    font-family:  ClashDisplay-Regular;
+}
+
+.container{
+    white-space: nowrap;
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-left: 140px;
+}
+
+.container img{
+    float: left;
+    height: 600px;
+    padding: 20px;
+}
+
+.container .AirLugina{
+    float: right;
+    height: 50px;
+    padding-top: 30px;
+    padding-right: 470px;
+}
+
+.container h1{
+    padding-top: 50px;
+   padding-left: 520px;
+}
+
+.p1{
+    padding-left: 520px;
+    font-size: 15px;
+}
+
+.table{
+    padding-left: 520px;
+    width: 420px;
+    color: white;
+}
+
+
+.inputbox {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 15px 0;
+    position: relative;
+    border-radius: 40px;
+}
+
+.inputbox input {
+    width: 100%; 
+    height: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+    border-color: grey;
+    opacity: 80%;
+    border: none;
+    outline: none;
+}
+
+.inputbox input::placeholder {
+    color: black;
+}
+
+.remember {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #FF3D00;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #FF3D00;
+    color: azure;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.register a {
+    color: #FF3D00;
+    text-decoration: none;
+}
+
+.remember a{
+    color: rgb(0, 0, 0);
+}
+
+.register p{
+    color: black;
+}
+
+.inputbox i {
+    position: absolute;
+    left: 390px; 
+    top: 55%;
+    transform: translateY(-30%);
+    color: black; 
+    font-size: 20px;
+    pointer-events: none; 
+}
+
+#box1{
+    display: inline-block;  
+    width: 200px;
+}
+
+#box2{
+    margin-left: 17px;
+    display: inline-block;  
+    width: 200px;
+}
+
+.fieldset{
+    color: black;
+    border-radius: 10px;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+input.error {
+    border-color: red;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inputbox {
+    position: relative;
+}
+
+.fieldset.error {
+    border: 2px solid red;
+    color: red;
+}
+
