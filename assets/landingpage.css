@@ -93,6 +93,20 @@
     font-weight: bold;
   }
 
+
+  .left-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .left-nav a{
+    text-decoration: none;
+    color: white;
+    font-family: ClashDisplay-Regular;
+  }
+
   .sig {
     background-color: white;
     color: rgb(25, 35, 44);

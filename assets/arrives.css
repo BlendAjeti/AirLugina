@@ -33,21 +33,14 @@ body{
     background-color:#fafbfc ;
 }
 
-.container{
-    /* margin: 15px 104px; */
 
-}
 
 .navbar{
-    /* margin: 15px 104px; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     width: 100%;
     background-color: #ffffff;
     display: flex;
     height: 87px;
-
-
-    
 }
 
 
@@ -67,7 +60,12 @@ body{
 
 }
 
+.home a{
+    text-decoration: none;
+    color: black;
+    font-family: ClashDisplay-Semibold;
 
+}
 
 .flights{
     display: flex;
@@ -80,35 +78,85 @@ body{
     font-family: ClashDisplay-SemiBold;
 }
 
-
-.user-logo{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: ClashDisplay-Regular;
+.flight-name a{
+    text-decoration: none;
+    color: black;
 }
 
-.user-img img{
+.user-ctnn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: margin-top 0.3s ease; 
+}
+
+.user-ctnn.active {
+    margin-top: 90px;
+}
+
+.user-ctn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    position: relative;
+    width: 100%;
+}
+
+.user-img img {
     margin-right: 10px;
-    width:50px;
+    width: 50px;
     border-radius: 50%;
 }
 
-.arrow-down img{
+.arrow-down img {
     width: 20px;
     padding-top: 3px;
-
 }
+
+.user-logo {
+    display: none; 
+}
+
+.dropdown-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.user-logo .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-family: ClashDisplay-Regular;
+    color: black;
+    padding: 8px;
+}
+
+
+.dropdown #logout {
+    color: #FF8682;
+}
+
 
 
 .section-container{
     margin: 20px 104px;
 }
-
-
-
-
-
 
 
 .destinations{
@@ -411,6 +459,14 @@ body{
     .navbar-elements{
         margin: 0;
         justify-content: center;
+    }
+
+    .user-ctnn{
+        display: none;
+    }
+    .plane-type{
+        flex-direction: column;
+        gap: 20px;
     }
 
     .user-logo {
