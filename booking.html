@@ -1,82 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <link rel="stylesheet" href="Assets/booking.css">
+    <link rel="stylesheet" href="/AirLugina/Assets/booking.css">
 </head>
-
 <body>
     <div class="container">
         <div class="navbar">
             <div class="navbar-elements">
                 <div class="flights">
                     <div class="plane-logo">
-                        <img src="Assets/Images/plane.logo.png" alt="small-plane">
+                        <img src="/AirLugina/Assets/Images/plane.logo.png" alt="small-plane">
                     </div>
                     <div class="flight-name">
                         <p>Find Flight</p>
                     </div>
                 </div>
                 <div class="logo" id="img-logo">
-                    <img src="Assets/Images/Air-Lugina-Logo.png" alt="AirLugina-logo">
+                    <img src="/AirLugina/Assets/Images/Air-Lugina-Logo.png" alt="AirLugina-logo">
                 </div>
                 <div class="user-logo">
                     <div class="user-img">
-                        <img src="Assets/Images/user-photo.jpg" alt="User-logo">
+                        <img src="/AirLugina/Assets/Images/user-photo.jpg" alt="User-logo">
                     </div>
                     <div class="user-name">
                         <p>Blend A.</p>
                     </div>
                     <div class="arrow-down">
-                        <img src="Assets/Images/arrow-down.png" alt="arrow-down">
+                        <img src="/AirLugina/Assets/Images/arrow-down.png" alt="arrow-down">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="depart">
-        <form action="#">
-            <div class="from">
-                <fieldset>
-                    <legend> From - To </legend>
-                    <input type="text" id="from-to" name="from-to" placeholder="Preshevë - NewYork" required>
-                    <img src="Assets/Images/swap-vector.png" alt="swap">
-                </fieldset>
             </div>
-            <div class="trip">
-                <fieldset>
-                    <legend>Trip</legend>
-                    <select id="return" name="return" required>
-                        <option value="Return">Return</option>
-                        <option value="canada">Canada</option>
-                        <option value="uk">United Kingdom</option>
+            
+        </div>
+        <div class="depart">
+            <form action="#">
+                <div class="trip-1">
+                    <fieldset> 
+                        <legend>From</legend>
+                         <select id="return" name="return" required>
+                        <option value="Preshevë">Preshevë</option>
+                        <option value="canada">Prishtinë</option>
+                        <option value="uk">Tiran</option>
                         <option value="other">Other</option>
-                    </select>
-                </fieldset>
-            </div>
-            <div class="return">
-                <fieldset>
-                    <legend> Depart - Return </legend>
-                    <input type="text" id="date" name="date" placeholder="07 Nov 22 - 13 Nov 22" required>
-                </fieldset>
-            </div>
-            <div class="passanger">
-                <fieldset>
-                    <legend> Passanger - Class </legend>
-                    <input type="text" id="passanger" name="passanger" placeholder="1 Passenger,Economy" required>
-                </fieldset>
-            </div>
-            <div class="search">
-                <button><img src="Assets/Images/search-vector.png" alt="search"></button>
-            </div>
-        </form>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="trip-1">
+                    <fieldset> 
+                        <legend>To</legend>
+                         <select id="return" name="return" required>
+                        <option value="Return">Geneve</option>
+                        <option value="canada">Dubai</option>
+                        <option value="uk">Medine</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="depart-return">
+                    <fieldset>
+                        <legend>Depart</legend>
+                        <input type="date" id="depart" name="depart">
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset class="depart-return">
+                        <legend>Return</legend>
+                        <input type="date" id="return" name="return">
+                    </fieldset>
+                  </div>
+                <div class="passanger">
+                    <fieldset>
+                        <legend> Passanger - Class </legend>
+                        <input type="text" id="passanger" name="passanger" placeholder="1 Passenger,Economy" required>
+                    </fieldset>
+                </div>
+                <div class="search">
+                    <button><img src="/AirLugina/Assets/Images/search-vector.png" alt="search"></button>
+                </div>
+            </form>
+        </div>
         <div class="emirates">
             <div class="emirate-img">
-                <img src="Assets/Images/emirates.png" alt="emirate">
+                <img src="/AirLugina/Assets/Images/emirates.png" alt="emirate">
             </div>
             <div class="very-good">
                 <div class="ctn">
@@ -125,14 +134,13 @@
 
                 </div>
                 <div class="details-btn">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
                 </div>
             </div>
         </div>
         <div class="emirates">
             <div class="emirate-img">
-                <img src="Assets/Images/dubai.png" alt="emirate">
+                <img src="/AirLugina/Assets/Images/dubai.png" alt="emirate">
             </div>
             <div class="very-good">
                 <div class="ctn">
@@ -178,17 +186,16 @@
                     </div>
                 </div>
                 <div class="bord">
-
+                    
                 </div>
                 <div class="details-btn">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
                 </div>
             </div>
         </div>
         <div class="emirates">
             <div class="emirate-img">
-                <img src="Assets/Images/qatar.png" alt="emirate">
+                <img src="/AirLugina/Assets/Images/qatar.png" alt="emirate">
             </div>
             <div class="very-good">
                 <div class="ctn">
@@ -234,17 +241,16 @@
                     </div>
                 </div>
                 <div class="bord">
-
+                    
                 </div>
                 <div class="details-btn">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
                 </div>
             </div>
         </div>
         <div class="emirates">
             <div class="emirate-img">
-                <img src="Assets/Images/etihad.png" alt="emirate">
+                <img src="/AirLugina/Assets/Images/etihad.png" alt="emirate">
             </div>
             <div class="very-good">
                 <div class="ctn">
@@ -290,11 +296,10 @@
                     </div>
                 </div>
                 <div class="bord">
-
+                    
                 </div>
                 <div class="details-btn">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
                 </div>
             </div>
         </div>
@@ -305,16 +310,13 @@
 
         </div>
     </div>
-    </div>
-
-    </div>
     <div class="footer">
         <div class="lugina-logo">
             <div class="air-img">
-                <img src="Assets/Images/AirLugina-footer.png" alt="Air-Lugina">
+                <img src="/AirLugina/Assets/Images/AirLugina-footer.png" alt="Air-Lugina">
             </div>
             <div class="social-medias">
-                <img src="Assets/Images/Social-medias.png" alt="Social-Medias">
+                <img src="/AirLugina/Assets/Images/Social-medias.png" alt="Social-Medias">
             </div>
         </div>
         <div class="our-destinations">
@@ -355,5 +357,4 @@
         </div>
     </div>
 </body>
-
 </html>

@@ -1,26 +1,26 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
@@ -66,6 +66,8 @@ body{
     height: 49px;
 
 }
+
+
 
 .flights{
     display: flex;
@@ -157,6 +159,14 @@ body{
     margin-right: 10px;
 }
 
+.form-container form fieldset{
+    border-radius: 4px;
+}
+
+.form-container form fieldset legend{
+    margin-left: 10px;
+}
+
 .form-group input:focus{
     outline: none; 
     border: none;  
@@ -195,7 +205,7 @@ body{
 }
 .name-on-card input:focus{
     outline: none; 
-    border: none;  
+    border: none;    
 }
 
 .upload-images{
@@ -231,8 +241,6 @@ fieldset legend{
 }
 
 .s-upload{
-    margin: 0 300px 0;
-    width: 640px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,5 +288,135 @@ fieldset legend{
     padding-bottom: 20px;
 }
 
+@media only screen 
+and (max-width : 767px){
+    .container{
+        width: 100%;
+    }
 
+    .navbar{
+        display: flex;
+        justify-content: center;;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-elements{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .user-logo {
+        display: none;
+    }
+    .flights {
+        display: none;
+    }
+    .direction{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin:20px 0 10px 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .form-container{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 4.2%;
+        padding: 0;
+    }
+
+    .form-container form{
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-group{
+        width: 100%;
+    }
+    .form-group input{
+        width: 50%;
+    }
+
+    .form-group fieldset{
+        width: 50%;
+    }
+
+    .exp-date{
+        width: 50%;
+    }
+    .exp-date fieldset{
+        width: 100%;
+    }
+
+    .cvc{
+        width: 50%;
+    }
+
+    .cvc fieldset{
+        width: 100%;
+    }
+
+    .cvc input{
+        width: 50%;
+    }
+
+    .upload-images{
+        width: 96%;
+    }
+
+    .form-container form button{
+        width: 100%;
+    }
+
+    
+
+
+
+
+    
+    .space{
+        display: none;
+    }
+
+    .footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .our-destinations{
+        
+        display: none;
+    }
+    .our-destinations h4{
+        display: none;
+    }
+    .our-destinations p{
+        display: none;
+    }
+    .air-img img{
+        width: 140px;
+        padding-bottom: 10px;
+
+    }
+    .social-medias img{
+        width: 140px;
+    }
+    .lugina-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
 

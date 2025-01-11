@@ -1,26 +1,26 @@
-font-face {
+@font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
@@ -35,7 +35,6 @@ body{
 
 .container{
     /* margin: 15px 104px; */
-
 }
 
 .navbar{
@@ -66,6 +65,7 @@ body{
     height: 49px;
 
 }
+
 
 
 .flights{
@@ -108,13 +108,14 @@ body{
     padding: 0 10px;
 }
 .ticket-price{
-    margin:  20px 104px;
+    /* margin:  20px 104px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .ticket{
-    width: 930px;
+    /* width: 930px; */
+    width: 54%;
     background-color: #ffffff;
     padding: 15px;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
@@ -156,6 +157,14 @@ body{
     padding-top:30px;
 }
 
+.wifi-logo img{
+    width: 100%;
+}
+
+.plane-direction img{
+    width: 100%;
+}
+
 .newark{
     display: flex;
     align-items: center;
@@ -172,7 +181,8 @@ font-family: ClashDisplay-Regular;
 
 .price-fee{
 
-    width: 450px;
+    /* width: 450px; */
+    width: 27%;
     height: 360px;
     background-color: #ffffff;
     padding: 15px;
@@ -237,13 +247,18 @@ font-family: ClashDisplay-Regular;
     padding: 10px 0;
 }
 
+
 .add-new{
-    margin:  20px 104px;
+    /* margin:  20px 104px; */
+    display: flex;
+    justify-content: flex-start;
+    margin-left:5.3%; 
 
 }
 
 .new-card{
-    width: 900px;
+    /* width: 900px; */
+    width: 55.5%;
     background-color: #ffffff;
     padding: 30px;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
@@ -273,6 +288,13 @@ font-family: ClashDisplay-Regular;
     width: 100%;
 }
 
+.form-container form fieldset legend{
+    margin-left: 10px;
+}
+
+.form-container form fieldset {
+    border-radius: 4px;
+}
 .form-group{
     display: flex;
 }
@@ -280,7 +302,8 @@ font-family: ClashDisplay-Regular;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 904px;
+    /* width: 904px; */
+    width: 100%;
     
 }
 .c-number fieldset{
@@ -303,6 +326,12 @@ font-family: ClashDisplay-Regular;
     font-family: ClashDisplay-Regular;
 
 }
+
+.c-number fieldset input:focus{
+    outline: none; 
+    border: none;  
+}
+
 .form-group{
     width: 100%;
     display: flex;
@@ -311,16 +340,28 @@ font-family: ClashDisplay-Regular;
 }
 .form-group input{
     border: none;
-    width: 423px;
+    /* width: 423px; */
+    width: 50%;
     margin: 7px 10px 10px 10px;
     font-family: ClashDisplay-Regular;
+}
+
+.exp-date{
+    width: 50%;
+}
+.cvc{
+    width: 50%;
+}
+.form-group input:focus{
+    outline: none; 
+    border: none;  
 }
 .fieldseti{
     margin-right: 10px;
 }
 
 .name-on-card fieldset{
-    width: 100%;
+    width: 99.6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,8 +376,15 @@ font-family: ClashDisplay-Regular;
     width: 100%;
     font-family: ClashDisplay-Regular;
 }
+
+
+.name-on-card input:focus{
+    outline: none; 
+    border: none;  
+}
+
 .selecti fieldset{
-    width: 100%;
+    width: 99.6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -351,6 +399,10 @@ font-family: ClashDisplay-Regular;
     font-family: ClashDisplay-Regular;
 } 
 
+.selecti fieldset select:focus{
+    outline: none; 
+    border: none;  
+}
 .checkbox{
     margin: 15px 0;
     font-family: ClashDisplay-Semibold;
@@ -419,19 +471,36 @@ fieldset legend{
 
 @media only screen 
 and (max-width : 767px){
-    .navbar{
+    .container{
         width: 100%;
-
     }
+
+    .navbar{
+        display: flex;
+        justify-content: center;;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-elements{
+        margin: 0;
+        justify-content: center;
+    }
+
     .user-logo {
         display: none;
     }
     .flights {
         display: none;
     }
-
     .direction{
-        display: inline;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin:20px 0 10px 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 13px;
     }
 
@@ -449,9 +518,13 @@ and (max-width : 767px){
     }
 
     .ticket-price{
-        display: block;
-        width: 400px;
-        margin: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* width: 400px; */
+        width: 100%;
+        margin:0;
     }
 
     .ticket{
@@ -505,10 +578,24 @@ and (max-width : 767px){
         display: inline;
     }
 
+    .add-new{
+        width: 100%;
+        margin: 30px 0;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+
     .new-card{
-        width: 300px;
+        /* width: 300px; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         height: 480px;
-        margin:0 15px ;
+        width: 70%;
+        margin:0px;
+        /* margin:0 15px ; */
     }
     .big-text h1{
         font-size: 20px;
@@ -519,7 +606,7 @@ and (max-width : 767px){
     }
 
     .c-number{
-        width: 100%;
+        width: 101.5%;
         
     }
 
@@ -529,10 +616,27 @@ and (max-width : 767px){
         font-family: ClashDisplay-Regular;
         font-size: 14px;
     }
-    .form-group input{
-        width: 50%;
-        margin: 7px 10px 10px 10px;
+    .form-group fieldset{
+        width: 100%;
     }
+
+    .form-group input{
+        width: 30%;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .form-container form{
+        width: 100%;
+    }
+
+    .form-container form fieldset{
+        width: 100%;
+    }
+
+
 
     
     .space{
@@ -582,8 +686,11 @@ and (max-width : 767px){
     }
     
     .ticket-price{
-        margin:  0 20px;
-        display: block;
+        /* margin:  0 20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .ticket{
         width: 600px;
@@ -601,17 +708,31 @@ and (max-width : 767px){
     }
 
     .price-fee{
-        margin:40px 120px 0 120px ;
+        margin:0;
+        width: 40%;
+        height: 400px;
+    }
+
+    .ecoonomyf{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     #karta{
-        display: inline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
     }
 
+
+
     .new-card{
-        width: 600px;
+        width: 80%;
         height: 420px;
-        margin:20px 40px;
+        margin: 0;
     }
     .c-number{
         width: 100%;
@@ -624,10 +745,43 @@ and (max-width : 767px){
         font-family: ClashDisplay-Regular;
         font-size: 14px;
     }
-    .form-group input{
-        width: 272px;
+    
+    .exp-date{
+        width: 50%;
+    }
+
+    .exp-date input{
+        width: 100%;
+    }
+
+    .cvc{
+        width: 50%;
+    }
+
+    .cvc input{
+        width: 100%;
+    }
+
+    .exp-date .fieldseti fieldset{
+        width: 30%;
         margin: 7px 10px 10px 10px;
     }
+
+
+    .name-on-card{
+        width: 100%;
+    }
+
+    .name-on-card fieldset{
+        width: 99.3%;
+    }
+
+    .selecti{
+        width: 99.3%;
+    }
+
+
+
 
     .space{
         display: none;

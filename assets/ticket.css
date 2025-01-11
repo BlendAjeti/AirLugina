@@ -1,26 +1,26 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
@@ -131,7 +131,7 @@ body{
     padding-right: 7px;
 }
 .ticket-box{
-    width: 1200px;
+    width: 85%;
     margin: 40px auto;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
@@ -184,6 +184,10 @@ body{
     align-items: center;
     padding: 20px 40px;
 }
+.code img{
+    width: 100%;
+}
+
 
 .date-container{
     display: flex;
@@ -276,12 +280,23 @@ body{
 }
 
 
-@media only screen 
-and (max-width : 767px){
-    .navbar{
+@media only screen and (max-width : 767px){
+    .container{
         width: 100%;
-
     }
+
+    .navbar{
+        display: flex;
+        justify-content: center;;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-elements{
+        margin: 0;
+        justify-content: center;
+    }
+
     .user-logo {
         display: none;
     }
@@ -289,144 +304,190 @@ and (max-width : 767px){
         display: none;
     }
     
-.direction{
-    margin: 20px;
-    display: inline;
-    text-align: center;
-    font-family: ClashDisplay-Regular;
-}
-.direction span{
-    color: #112211;
-    padding: 0;
-    font-family: ClashDisplay-Semibold;
-}
+    .direction{
+        margin: 20px;
+        display: inline;
+        text-align: center;
+        font-family: ClashDisplay-Regular;
+    }
+    .direction span{
+        color: #112211;
+        padding: 0;
+        font-family: ClashDisplay-Semibold;
+    }
 
-.emirate{
-    display: block;
-    margin: 20px 104px;
-    font-family: ClashDisplay-Light;
-    text-align: center;
+    .emirate{
+        display: block;
+        margin: 20px 104px;
+        font-family: ClashDisplay-Light;
+        text-align: center;
 
-}
+    }
 
-.emirate .money{
-    font-family: ClashDisplay-Semibold;
-}
+    .emirate .money{
+        font-family: ClashDisplay-Semibold;
+    }
 
-.loc{
-    text-align: center;
-    display: inline-block;
-    margin: 20px 104px;
-    font-family: ClashDisplay-Regular;
-}
+    .loc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        font-family: ClashDisplay-Regular;
+    }
 
-.loc img{
-    padding-right: 7px;
-    width: 20px;
-    height: 20px;
-}
+    .loc img{
+        padding-right: 7px;
+        width: 20px;
+        height: 20px;
+    }
 
-.ticket-box{
-    width: 90%;
-    margin: 40px auto;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    border-radius: 10px;
+    .ticket-box{
+        width: 90%;
+        margin: 40px auto;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+        border-radius: 10px;
 
-}
+    }
 
-.time img{
-    padding: 0 30px;
-}
+    .time img{
+        padding: 0 30px;
+    }
 
-.boarding-num{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 20px;
-    background-color:#FF3D00;
-    border-top-left-radius:10px ;
-    border-top-right-radius:10px ;
+    .boarding-num{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+        background-color:#FF3D00;
+        border-top-left-radius:10px ;
+        border-top-right-radius:10px ;
 
+        
+    }
+
+    .code img{
+        width: 300px;
+    }
+
+
+
+
+    .b-number h3{
+        font-family: ClashDisplay-Regular;
+        color: #112211;
+        font-size: 20px;
+    }
+
+    .b-number p{
+        font-family: ClashDisplay-Regular;
+        color: #112211;
+        font-size: 14px;
+    }
+
+    .bussines-class p{
+        font-family: ClashDisplay-Extralight;
+        color: #112211;
+        font-size: 14px;
+    }
+
+
+    .code-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr ;
+        gap: 20px;
+        padding: 30px 50px;
+    }
+
+    .date-container{
+        display: flex;
+        font-family: ClashDisplay-Regular;
+    }
+    .date-vector img{
+        padding-right: 7px;
+    }
+    .class-2{
+        display: block;
+        padding: 20px 40px;
+        font-family: ClashDisplay-Regular;
+    }
+
+    .time{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .time img{
+        width: 60px;
+    }
+    .time h1{
+        font-size: 20px;
+    }
+    .time p{
+        font-size: 14px;
+    }
+
+
+    .ek{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .ek p{
+        font-size: 15px;
+    }
+
+    .code{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .estimated-time{
+        width: 70px;
+    }
+
+
+    .space{
+        display: none;
+    }
+
+    .footer{
+        height: 100%;
+        width: 100%;
+
+    }
     
+    .our-destinations{
+        
+        display: none;
+    }
+    .our-destinations h4{
+        display: none;
+    }
+    .our-destinations p{
+        display: none;
+    }
+    .air-img img{
+        width: 140px;
+        padding-bottom: 10px;
+
+    }
+    .social-medias img{
+        width: 140px;
+    }
+    .lugina-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
 }
 
-
-
-
-.b-number h3{
-    font-family: ClashDisplay-Regular;
-    color: #112211;
-    font-size: 20px;
-}
-
-.b-number p{
-    font-family: ClashDisplay-Regular;
-    color: #112211;
-    font-size: 14px;
-}
-
-.bussines-class p{
-    font-family: ClashDisplay-Extralight;
-    color: #112211;
-    font-size: 14px;
-}
-
-
-.code-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr ;
-    gap: 20px;
-    padding: 30px 50px;
-}
-
-.date-container{
-    display: flex;
-    font-family: ClashDisplay-Regular;
-}
-.date-vector img{
-    padding-right: 7px;
-}
-.class-2{
-    display: block;
-    padding: 20px 40px;
-    font-family: ClashDisplay-Regular;
-}
-
-.time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.time img{
-    width: 60px;
-}
-.time h1{
-    font-size: 20px;
-}
-.time p{
-    font-size: 14px;
-}
-
-
-.ek{
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.ek p{
-    font-size: 15px;
-}
-
-.code{
-    margin-top: 10px;
-    text-align: center;
-}
-.estimated-time{
-    width: 70px;
-}
-}
+          

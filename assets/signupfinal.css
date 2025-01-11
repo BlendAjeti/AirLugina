@@ -1,26 +1,26 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/OTF/ClashDisplay-Regular.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/OTF/ClashDisplay-SemiBold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 *{
     font-family:  ClashDisplay-Regular;

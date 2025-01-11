@@ -1,26 +1,26 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
@@ -33,24 +33,38 @@ body{
     background-color:#fafbfc ;
 }
 
+.container{
+    /* margin: 15px 104px; */
+
+}
+
 .navbar{
     /* margin: 15px 104px; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     width: 100%;
     background-color: #ffffff;
     display: flex;
-    height: 87px; 
+    height: 87px;
+
+
+    
 }
+
+
+
 .navbar-elements{
     margin: 0 104px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
+
 .navbar .logo img{
     width: 195px;
     height: 49px;
+
 }
 
 
@@ -90,6 +104,10 @@ body{
 .section-container{
     margin: 20px 104px;
 }
+
+
+
+
 
 
 
@@ -147,6 +165,11 @@ body{
     border-radius: 5px;
 }
 
+.btn button a{
+    text-decoration: none;
+    color: #ffffff;     
+}
+
 .big-plane{
     display: flex;
     justify-content: center;
@@ -154,7 +177,8 @@ body{
 }
 
 .big-plane img{
-    width: 2120px;
+    /* width: 2120px; */
+    width: 100%;
 }
 
 .h2-text{
@@ -167,8 +191,13 @@ body{
 }
 
 .grid-container{
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(9, 1fr); */
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-item{
@@ -199,6 +228,7 @@ body{
     font-family: ClashDisplay-Regular;
     margin: 10px;
 }
+
 
 
 
@@ -258,6 +288,7 @@ body{
     height: 120px;
 }
 
+
 .footer{
     width: 100%;
     height: 282px;
@@ -288,7 +319,8 @@ body{
 
 @media(max-width:900px) {
     .big-plane img{
-        width: 570px;
+        /* width: 570px; */
+        width: 90%;
     }
     .grid-container{
         display: grid;
@@ -342,7 +374,6 @@ body{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
         width: 100%;
         height: 282px;
         justify-self: center;
@@ -365,11 +396,23 @@ body{
 
 
 @media screen and (max-width:767px) {
+
+    .container{
+        width: 100%;
+    }
+
     .navbar{
         display: flex;
         justify-content: center;;
         align-items: center;
+        width: 100%;
     }
+
+    .navbar-elements{
+        margin: 0;
+        justify-content: center;
+    }
+
     .user-logo {
         display: none;
     }
@@ -380,12 +423,6 @@ body{
     .section-container{
         display: inline;
     }
-    
-    
-    
-    
-    
-    
     
     .destinations{
         font-family: ClashDisplay-Regular;
@@ -403,9 +440,9 @@ body{
     
     .plane-type{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        margin: 0 30px;
+        margin: 0;
     }
     .plane-type h2{
         font-family: ClashDisplay-Light;
@@ -432,8 +469,9 @@ body{
     .location-btn{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
-        margin: 10px 10px;
+        margin: 10px 0;
     }
     
     .btn button{
@@ -474,9 +512,12 @@ body{
         background-color: #EEEEEE;
         border-radius: 10px;
         width: 80%;
-        margin: 0 40px;
+    }
 
-
+    .policies-ctn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .emirates h2{
@@ -496,14 +537,21 @@ body{
     .date{
         display: gtro;
         width: 90%;
-        margin: 0 20px;
+        margin: 0;
         background-color: #ffffff;
         -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
         -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
         box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
     }
     
-    
+    .date-ctn{
+        margin:20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
     
     .return-date{
         padding-top: 20px;
@@ -558,11 +606,9 @@ body{
         display: none;
     }
     .footer{
-        width: 100%;
         height: 100px;
         background-color:#F3F3F3;
         text-align: center;
-        padding: 20px;
     }
     
     .our-destinations{
@@ -579,9 +625,6 @@ body{
         width: 100px;
         padding-bottom: 10px;
 
-    }
-    .lugina-logo{
-        margin: 20px 0;
     }
 
 }

@@ -7,27 +7,27 @@
 
   @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(/AirLugina/assets/Fonts/OTF/ClashDisplay-Semibold.otf);
 }
   
  
@@ -47,7 +47,7 @@
     width: 100%;
     max-width: 1200px;
     height: 50vh;
-    background: url('/assets/Images/backroung.png') center/cover no-repeat;
+    background: url('/AirLugina/assets/Images/backroung.png') center/cover no-repeat;
     display: flex;
     border-radius: 20px;
     align-items: center;
@@ -272,7 +272,7 @@
     width: 600px;
     height: 530px;
     color: white;
-    background-image: url(/assets/Images/backkk.png);
+    background-image: url(/AirLugina/assets/Images/backkk.png);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -285,7 +285,7 @@
     width: 600px;
     height: 530px;
     color: white;
-    background-image: url(/assets/Images/back.png);
+    background-image: url(/AirLugina/assets/Images/back.png);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -327,3 +327,210 @@
       
       padding-bottom: 20px;
   }
+
+
+  @media only screen and (max-width : 1220px){
+    
+  .hero {
+    width: 80%;
+  }
+
+  .offerts{
+    width: 80%;
+  }
+
+  .fli{
+    width: 80%;
+  }
+
+  .form-container{
+    width: 90%;
+  }
+
+  .form-container form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .form-group select{
+    width: 100%;
+  }
+
+  .form-group input{
+    width: 100%;
+  }
+
+  }
+
+  @media(max-width:900px) {
+    .navbar button{
+      width: 80px;
+    }
+
+    .hero-overlay h3{
+      font-size: 30px;
+    }
+    
+    .hero-overlay h1{
+      font-size: 60px;
+    }
+    
+    .hero-overlay p{
+      font-size: 20px;
+    }
+    .form-container form{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cards{
+      margin-top: 30px;
+      display: grid;
+      grid-template-rows: 1fr 1fr ;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .space{
+      height: 90px;
+  }
+  .footer{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 282px;
+      justify-self: center;
+
+  }
+  .our-destinations{
+      width: 100px;
+  }
+  .air-img img{
+      width: 130px;
+  }
+  .social-medias img{
+      width: 100px;
+  }
+  .footer p{
+      font-size: 10px;
+  }
+  }
+  
+
+  
+@media screen and (max-width:767px) {
+
+  .container{
+      width: 100%;
+  }
+
+  .navbar{
+      display: flex;
+      justify-content: center;;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+  }
+
+  .form-group{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-group select{
+    width:100%;
+  }
+
+  .form-group input{
+    width:100%;
+  }
+
+
+  .hero h3{
+    margin-top: 80px;
+  }
+
+  .left-nav{
+    display: none !important;
+  }
+  .navbar button{
+    width: 100px;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card{
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .card-content h3{
+    font-size: 30px;
+  }
+  .features h1{
+    font-size: 40px;
+  }
+  .tit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap: 30px;
+
+  }
+
+  .fli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+  }
+
+  .cardd{
+    width: 100%;
+  }
+
+  .cardd2{
+    width: 100%;
+  }
+  .footer{
+    height: 100px;
+    background-color:#F3F3F3;
+    text-align: center;
+  }
+
+  .our-destinations{
+      
+      display: none;
+  }
+  .our-destinations h4{
+      display: none;
+  }
+  .our-destinations p{
+      display: none;
+  }
+  .air-img img{
+      width: 100px;
+      padding-bottom: 10px;
+
+  }
+
+}
