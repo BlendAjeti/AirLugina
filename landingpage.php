@@ -83,58 +83,54 @@ session_start();
     </div>
 
 
-      <div class="form-container">
-        <div> <h2 style="font-size: 1em; display: flex; align-items: center;"><img src="/AirLugina/assets/Images/airplanee.png" alt="icon" style="padding-right: 6px;"> Flights</h2></div>
-        <form action="#">
-          <div class="form-group">
-            <div>
-              <label for="from">From</label>
-              <select id="from" name="from">
-                <option value="preshve">Preshevë</option>
-                <option value="istanbul">Prishtinë</option>
-                <option value="paris">Istambul</option>
-                <option value="london">London</option>
-              </select>
+    <div class="form-container">
+        <div>
+            <h2 style="font-size: 1em; display: flex; align-items: center;"><img src="Assets/Images/airplanee.png" alt="icon" style="padding-right: 6px;"> Flights</h2>
+        </div>
+        <form action="booking.php" method="GET">
+            <div class="form-group">
+                <div>
+                    <fieldset>
+                        <legend>From</legend>
+                        <select id="from" name="from">
+                            <option value="" <?= empty($origin) ? 'selected' : '' ?>>Select Origin</option>
+                            <option value="Burrel">Burrel</option>
+                            <option value="Stamboll">Stamboll</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Geneva">Geneva</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>To</legend>
+                        <select id="to" name="to">
+                            <option value="" <?= empty($origin) ? 'selected' : '' ?>>Select Origin</option>
+                            <option value="Stamboll">Stamboll</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Geneva">Geneva</option>
+                        </select>
+                    </fieldset>
+                </div>
             </div>
-            <div>
-              <label for="to">To</label>
-              <select id="to" name="to">
-                <option value="istanbul">Prishtinë</option>
-                <option value="preshve">Preshevë</option>
-                <option value="paris">Istambul</option>
-                <option value="london">London</option>
-              </select>
+            <div class="form-group">
+                <div>
+                    <fieldset>
+                        <legend>Depart</legend>
+                        <input type="datetime-local" id="depart" name="depart">
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Return</legend>
+                        <input type="datetime-local" id="return" name="return">
+                    </fieldset>
+                </div>
             </div>
-            <div>
-              <label for="trip">Trip</label>
-              <select id="trip" name="trip">
-                <option value="one-way">One-way</option>
-                <option value="return">Return</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <div>
-              <label for="dates">Depart</label>
-              <input type="date" id="depart" name="depart">
-            </div>
-            <div>
-              <label for="dates">Return</label>
-              <input type="date" id="return" name="return">
-            </div>
-            <div>
-              <label for="passenger-class">Passenger - Class</label>
-              <select id="passenger-class" name="passenger-class">
-                <option value="1-business">1 Passenger, Business</option>
-                <option value="1-economy">1 Passenger, Economy</option>
-                <option value="2-business">2 Passengers, Business</option>
-                <option value="2-economy">2 Passengers, Economy</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="submit-btn">Show Flights</button>
+            <button type="submit" class="submit-btn">Show Flights</button>
         </form>
-      </div>
+
+    </div>
       
       <div class="offerts">
         <div class="tit">
