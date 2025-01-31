@@ -1,32 +1,33 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
     margin:0;
     padding: 0;
     /* font-family: ClashDisplay-Regular; */
+
 }
 
 body{
@@ -163,6 +164,7 @@ body{
     width: 80%;
     background-color: #ffffff; 
     border: 7px;
+    border-radius: 10px;
     /* margin:  40px 95px; */
     font-family: ClashDisplay-Regular;
     /* display: flex; */
@@ -171,9 +173,10 @@ body{
     justify-content: center;
     align-items: center;
     margin: 2% 10%;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
 }
 
 .depart form{
@@ -205,9 +208,8 @@ body{
 }
 
 .from fieldset input{
-    
     border: none;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
     padding: 12px;
     
 }
@@ -226,7 +228,27 @@ body{
     color: #ffffff;
 }
 
+.details-btn button:hover{
+    background-color: #ff5722;
+    cursor: pointer;
 
+}
+
+.no-flights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
+    text-align: center;
+}
+
+.no-flights .error-red {
+    color: #ff0000; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: ClashDisplay-Regular;
+
+}
 
 .trip-1 fieldset{
     display: flex;
@@ -234,13 +256,14 @@ body{
     align-items: center;
     font-size: 12px;
     border-radius: 5px;
-    /* margin-right: 30px; */
+    width: 150px;
 }
 
 .trip-1 fieldset select{
     border: none;
     padding: 12px;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
+    width: 90%;
 }
 
 
@@ -262,7 +285,7 @@ body{
 .trip fieldset select{
     border: none;
     padding: 12px;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
 }
 
 
@@ -283,7 +306,7 @@ body{
 
 .depart-return input{
     border: none;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
     padding: 12px;
     
 }
@@ -299,7 +322,7 @@ body{
 
 .return fieldset input{
     border: none;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
     padding: 12px;
     
 }
@@ -310,25 +333,27 @@ body{
 }
 
 
-.passanger fieldset{
+.passenger fieldset{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     border-radius: 5px;
-    /* margin-right: 30px; */
 }
 
-.passanger fieldset input{
+.passenger fieldset input{
     border: none;
-    font-family: ClashDisplay-Semibold;
+    font-family: ClashDisplay-Regular;
     padding: 12px;
-    
 }
 
-.passanger fieldset input:focus{
+.passenger fieldset input:focus{
     border: none;
     outline:none;
+}
+
+.search{
+    margin-top: 0.43%;
 }
 
 .search button{
@@ -338,21 +363,37 @@ body{
     border-radius: 4px;
 }
 
-.emirates{
-    width: 80%;
-    background-color: #ffffff; 
-    border: 7px;
-    margin:  2% 10%;
-    font-family: ClashDisplay-Regular;
-    /* display: flex; */
-    display: flex;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+.search button:hover{
+    background-color: #ff5722;
+    cursor: pointer;
 }
+
+.emirates {
+    display: none; 
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 2% 10%;
+    font-family: ClashDisplay-Regular;
+    display: flex;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.emirates.visible {
+    display: flex; 
+}
+
 .very-good{
     width: 100%;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .reviews{
@@ -466,9 +507,15 @@ body{
     margin-bottom: 20px;
 }
 
-.emirate-img img{
+.emirate-img{
     margin: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.emirate-img img{
+    width: 100%;
 }
 
 .results {
@@ -478,16 +525,23 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .results button{
     width: 100%;
     padding: 13px;
     background-color: #000000;
     color: #ffffff;
-    font-family: ClashDisplay-Regular;
+    font-family: ClashDisplay-Semibold;
     border: none;
     border-radius: 4px;
     margin-bottom: 20px;
 }
+
+.results button:hover{
+    background-color: #272626;
+    cursor: pointer;
+}
+
 .space{
     height: 120px;
 }
@@ -636,4 +690,16 @@ and (max-width : 1200px){
         height: 100%;
         padding: 10px 0;
     }
+}
+
+@media only screen 
+and (max-width : 410px){
+    .depart form{
+        flex-direction: column;
+    }
+
+    .emirates{
+        margin: 30px 20px;
+    }
+
 }
