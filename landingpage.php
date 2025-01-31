@@ -218,65 +218,92 @@ session_start();
         </div>
       </div>
       
-     <div class="fli">
-        <div class="cardd">
-          <h1 style="font-size: 3rem; margin-bottom: 2px;">Flights</h1>
-          <p style="font-size: 1rem; margin-bottom: 20px;">Search Flights & Places Hire to our most popular destinations</p>
-          <button style="display: flex;" class="submit-btn"><i><img src="/AirLugina/assets/Images/tg.png" style="padding-right: 6px;" alt=""></i>Show Filghts</button>
+     
+    <div class="fli">
+        <div class="cardd2">
+            <div class="slider-container">
+                <div class="slider-content active" data-bg="url('../assets/Images/back.png')" data-title="Cheap Flights" data-description="Search Flights & Places Hire to our most popular destinations">
+                    <h1>Cheap Flights</h1>
+                    <p>Search Flights & Places Hire to our most popular destinations</p>
+                </div>
+                <div class="slider-content" data-bg="url('../assets/Images/backkk.png')" data-title="Explore Destinations" data-description="Find amazing destinations around the world.">
+                    <h1>Explore Destinations</h1>
+                    <p>Find amazing destinations around the world.</p>
+                </div>
+                <div class="slider-content" data-bg="url('../assets/Images/frame3.png')" data-title="Book Now" data-description="Book your flights now and get the best deals!">
+                    <h1>Book Now</h1>
+                    <p>Book your flights now and get the best deals!</p>
+                </div>
+            </div>
+
+            <button style="display: flex;" class="submit-btn">
+                <i><img src="Assets/Images/tg.png" style="padding-right: 6px;" alt=""></i>
+                <a href="booking.php">Show Flights</a>
+            </button>
         </div>
         <div class="cardd2">
-          <h1 style="font-size: 3rem; margin-bottom: 2px;">Cheap Flights</h1>
-          <p style="font-size: 1rem; margin-bottom: 20px;">Search Flights & Places Hire to our most popular destinations</p>
-          <button style="display: flex;" class="submit-btn"><i><img src="/AirLugina/assets/Images/tg.png" style="padding-right: 6px;" alt=""></i>Show Filghts</button>
+            <div class="slider-container">
+                <div class="slider-content" data-bg="url('../assets/Images/frame3.png')" data-title="Book Now" data-description="Book your flights now and get the best deals!">
+                    <h1>Book Now</h1>
+                    <p>Book your flights now and get the best deals!</p>
+                </div>
+                <div class="slider-content active" data-bg="url('../assets/Images/back.png')" data-title="Cheap Flights" data-description="Search Flights & Places Hire to our most popular destinations">
+                    <h1>Cheap Flights</h1>
+                    <p>Search Flights & Places Hire to our most popular destinations</p>
+                </div>
+                <div class="slider-content" data-bg="url('../assets/Images/backkk.png')" data-title="Explore Destinations" data-description="Find amazing destinations around the world.">
+                    <h1>Explore Destinations</h1>
+                    <p>Find amazing destinations around the world.</p>
+                </div>
+
+                
+            </div>
+
+            <button style="display: flex;" class="submit-btn">
+                <i><img src="Assets/Images/tg.png" style="padding-right: 6px;" alt=""></i>
+                <a href="booking.php">Show Flights</a>
+            </button>
         </div>
-     </div>
-     <div class="foot">
-        <div class="footer">
-          <div class="lugina-logo">
-              <div class="air-img">
-                  <img src="/AirLugina/assets/Images/AirLugina.png" alt="Air-Lugina">
-              </div>
-              <div class="social-medias">
-                  <img src="/AirLugina/assets/Images/Social-medias.png" alt="Social-Medias">
-              </div>
-          </div>
-          <div class="our-destinations">
-              <h4>Our destinations</h4>
-              <p>Canada</p>
-              <p>Alaska</p>
-              <p>France</p>
-              <p>Iceland</p>
-          </div>
-          <div class="our-destinations">
-              <h4>Our Activities</h4>
-              <p>Northern Lights</p>
-              <p>Cruising & Sailing</p>
-              <p>Multi-Activities</p>
-              <p>Kayaing</p>
-          </div>
-          
-          <div class="our-destinations">
-              <h4>Travel Blogs</h4>
-              <p>Bali Travel Guide</p>
-              <p>Sri Lanks Travel Guide</p>
-              <p>Peru Travel Guide</p>
-              <p>Bali Travel Guide</p>
-          </div>
-          <div class="our-destinations">
-              <h4>About Us</h4>
-              <p>Our Story</p>
-              <p>Work with us</p>
-              <p>Destinations</p>
-              <p>Our Journey</p>
-          </div>
-          <div class="our-destinations">
-              <h4>Contact Us</h4>
-              <p>Our Contacts</p>
-              <p>Emails</p>
-              <p>Our staff</p>
-              <p>Connections</p>
-          </div>
-       </div>
     </div>
+    <?php
+    include 'footer.php';
+    ?>
+    <script>
+       function initializeSlider(cardd2) {
+            let currentIndex = 0;
+            const sliderContents = cardd2.querySelectorAll('.slider-content');
+            const cardd2Element = cardd2;
+
+            function showSlide(index) {
+                sliderContents.forEach((content, i) => {
+                    content.classList.remove('active');
+                    if (i === index) {
+                        content.classList.add('active');
+                        // Change background, title, and description
+                        const bg = content.getAttribute('data-bg');
+                        const title = content.getAttribute('data-title');
+                        const description = content.getAttribute('data-description');
+                        
+                        cardd2Element.style.backgroundImage = bg;
+                        cardd2Element.querySelector('h1').textContent = title; 
+                        cardd2Element.querySelector('p').textContent = description;
+                    }
+                });
+            }
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % sliderContents.length;
+                showSlide(currentIndex);
+            }, 3000);
+
+            showSlide(currentIndex);
+        }
+
+        document.querySelectorAll('.cardd2').forEach(cardd2 => {
+            initializeSlider(cardd2);
+    });
+
+    </script>
+
 </body>
 </html>
