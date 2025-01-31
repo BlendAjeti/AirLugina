@@ -1,0 +1,264 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+
+@font-face{
+    font-family: TradeGothic;
+    src: url(Fonts/trade-gothic-lt-1361519976.ttf);
+}
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url(Fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face{
+    font-family: Montserrat-Medium;
+    src: url(Fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face{
+    font-family: Montserrat-Regular;
+    src: url(Fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face{
+    font-family: Montserrat-Semibold;
+    src: url(Fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color:#fafbfc ;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 10%;
+    /* height: 900px; */
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+
+.forgot-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 100px; */
+}
+
+.name-ctn{
+    display: flex;
+    gap: 20px;
+}
+
+.name-ctn fieldset{
+    width: 70%;
+}
+
+
+.logo img{
+    width: 50%;
+}
+
+.forgot{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    font-family: Montserrat-Medium;
+    color: #112211;
+}
+
+.link h1{
+    font-family: Montserrat-Regular;
+}
+
+.link p{
+    font-family: Montserrat-Regular;
+    color: #112211;
+}
+
+
+.form-container form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container form fieldset{
+    font-family: Montserrat-Regular;
+    color: #1C1B1F;
+    border-radius: 4px;
+}
+
+
+.form-container form fieldset legend{
+    font-family: Montserrat-Regular;
+    color: #1C1B1F;
+    margin-left: 10px;
+}
+
+.form-container form input{
+    border: none;
+    padding: 8px 8px 12px 8px;
+    font-family: Montserrat-Regular;
+    background-color: #fafbfc;
+    width: 80%;
+}
+
+.form-container form input:focus{
+    outline: none;
+}
+
+.form-container form button{
+    background-color: #FF3D00;
+    border: none;
+    color: #ffffff;
+    font-family: Montserrat-Semibold;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.remember{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: Montserrat-Medium;
+}
+.p span{
+    color: #FF3D00;
+}
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register p{
+    font-family: Montserrat-Medium;
+}
+.register a{
+    font-family: Montserrat-Medium;
+    color: #FF3D00;
+    text-decoration:none;
+}
+
+.img img{
+    width: 100%;
+}
+
+#terms{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+input.error {
+    border-color: red;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inputbox {
+    position: relative;
+}
+
+.fieldset.error {
+    border: 2px solid red;
+    color: red;
+}
+
+@media screen and (max-width:1100px) {
+    
+    .forgot-ctn{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .forgot{
+        width: 100%;
+    }
+
+    .logo img{
+        margin-left: 23%;
+        margin-bottom: 2%;
+    }
+    .img img{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width:1660px) {
+    .img img{
+        display: none;
+    }
+}
