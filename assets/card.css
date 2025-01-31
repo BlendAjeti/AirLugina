@@ -1,32 +1,33 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
     margin:0;
     padding: 0;
     /* font-family: ClashDisplay-Regular; */
+
 }
 
 body{
@@ -179,9 +180,10 @@ body{
     width: 54%;
     background-color: #ffffff;
     padding: 15px;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     height: 300px;
 }
 .airbus h1{
@@ -247,9 +249,10 @@ font-family: ClashDisplay-Regular;
     height: 360px;
     background-color: #ffffff;
     padding: 15px;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     /* margin-left: 100px; */
 }
 
@@ -322,9 +325,10 @@ font-family: ClashDisplay-Regular;
     width: 55.5%;
     background-color: #ffffff;
     padding: 30px;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     height: 420px;
 }
 
@@ -486,6 +490,10 @@ font-family: ClashDisplay-Regular;
     font-family: ClashDisplay-Semibold;
     margin: 10px 0;
 }
+.form-container form button:hover{
+    background-color: #ff5722;
+    cursor: pointer;
+}
 
 .paragraph{
     text-align: center;
@@ -525,7 +533,32 @@ fieldset legend{
     padding-bottom: 20px;
 }
 
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
 
