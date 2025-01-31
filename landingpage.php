@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +10,77 @@
     <link rel="stylesheet" href="/AirLugina/assets/landingpage.css">
 </head>
 <body>
-    <div class="hero">
+<div class="hero">
         <div class="hero-overlay">
-          <nav class="navbar">
-            <div style="display: flex;" class="left-nav">
-              <img style="margin-right: 5px;" src="/AirLugina/assets/Images/logo.png" alt=""> 
-              <p><a href="/AirLugina/booking.html">Find Flight</a></p>
+            <nav class="navbar">
+                <div style="display: flex;" class="left-nav">
+                    <img style="margin-right: 5px;" src="Assets/Images/logo.png" alt="">
+                    <a href="booking.php">Find Flight</a>
+                </div>
+                <div class="logo">
+                    <span><img src="Assets/Images/AirLuginaBARDH.png" alt=""></span>
+                </div>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <div class="user-ctnn">
+                        <div class="user-ctn">
+                            <div class="user-img">
+                                <img src="assets/Images/user-image.jpg" alt="User">
+                            </div>
+                            <div class="user-name">
+                                <p><?php echo $_SESSION['username']; ?></p>
+                            </div>
+                            <div class="arrow-down" id="arrow-down">
+                                <img src="assets/Images/arrow-down.png" alt="Arrow">
+                            </div>
+                        </div>
+                        
+                        <div class="user-logo">
+                        <div class="dropdown">
+                            <?php
+                            if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
+                                echo '
+                                <div class="dropdown-ctn">
+                                    <img src="assets/Images/Support.png" alt="Admin Panel">
+                                    <a href="deals.php">Admin Panel</a>
+                                </div>';
+                            }
+                            ?>
+                            <div class="dropdown-ctn">
+                                <img src="assets/Images/logout.png" alt="logout">
+                                <a href="logout.php" id="logout">Logout</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="buttons">
+                        <button class="log" onclick="window.location.href='login.php'">Login</button>
+                        <button class="sig" onclick="window.location.href='signup.php'">Sign up</button>
+                    </div>
+                <?php endif; ?>
+                <div class="menu-ctn">
+                    <div class="menu-toggle">
+                        <img src="assets/Images/white-m.png" alt="menu">
+                    </div>
+                    <div class="dropdown-second" id="dropdown-second">
+                        <ul>
+                            <li><a href="landingpage.php">Home</a></li>
+                            <li><a href="contact-us.php">Contact Us</a></li>
+                            <li><a href="booking.php">Flights</a></li>
+                            <?php if (!isset($_SESSION['user_id'])): ?>
+                                <li id="login-signup"><a href="login.php">Login</a></li>
+                                <li id="login-signup"><a href="signup.php">Sign Up</a></li>
+                            <?php endif; ?>
 
-            </div>
-            <div class="logo">
-              <span><img src="/AirLugina/assets/Images/AirLuginaBARDH.png" alt=""></span>
-            </div>
-            <div class="buttons">
-              <button class="log"><a href="/AirLugina/login.html">Login</a></button>
-              <button class="sig"><a href="/AirLugina/signup.html">Sign up</a></button>
-            </div>
-          </nav>
-          <h3>Helping Others</h3>
-          <h1>LIVE & TRAVEL</h1>
-          <p>Special offers to suit your plan</p>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h3>Helping Others</h3>
+            <h1>LIVE & TRAVEL</h1>
+            <p>Special offers to suit your plan</p>
         </div>
-      </div>
+    </div>
 
 
       <div class="form-container">
