@@ -1,169 +1,157 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "database";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if (isset($_FILES['flight_logo'])) {
+        if ($_FILES['flight_logo']['error'] === UPLOAD_ERR_OK) {
+            $target_dir = "uploads/";
+            if (!is_dir($target_dir)) {
+                mkdir($target_dir, 0755, true); 
+            }
+
+            $flight_logo = $target_dir . basename($_FILES["flight_logo"]["name"]);
+
+            if (move_uploaded_file($_FILES["flight_logo"]["tmp_name"], $flight_logo)) {
+                $flight_logo_path = $flight_logo;
+            } else {
+                echo "Error uploading file.";
+                exit;
+            }
+        } else {
+            $error_code = $_FILES['flight_logo']['error'];
+            switch ($error_code) {
+                case UPLOAD_ERR_INI_SIZE:
+                    echo "Error: The uploaded file exceeds the upload_max_filesize directive in php.ini.<br>";
+                    break;
+                case UPLOAD_ERR_FORM_SIZE:
+                    echo "Error: The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.<br>";
+                    break;
+                case UPLOAD_ERR_PARTIAL:
+                    echo "Error: The uploaded file was only partially uploaded.<br>";
+                    break;
+                case UPLOAD_ERR_NO_FILE:
+                    echo "Error: No file was uploaded.<br>";
+                    break;
+                default:
+                    echo "Error: Unknown upload error (code: $error_code).<br>";
+            }
+            exit;
+        }
+    } else {
+        echo "Error: No file input detected in the request.<br>";
+        exit;
+    }
+
+    $origin = $_POST['prishtina'];
+    $destination = $_POST['presheva'];
+    $date_time = $_POST['datetime'];
+    $flight_duration = $_POST['hours'];
+    $airline_name = $_POST['bus-name'];
+    $gate = intval($_POST['gate']);
+    $stock = intval($_POST['stock']);
+    $price = floatval($_POST['price']);
+
+
+
+
+    $sql = "INSERT INTO tickets (flight_logo, origin, destination, date_time, flight_duration, airline_name, gate, stock, price) 
+            VALUES ('$flight_logo_path', '$origin', '$destination', '$date_time', '$flight_duration', '$airline_name', $gate, $stock, $price)";
+
+    if ($conn->query($sql) === TRUE) {
+        
+
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking details</title>
-    <link rel="stylesheet" href="/AirLugina/Assets/booking-details.css">
+    <link rel="stylesheet" href="Assets/booking-details.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="navbar">
-            <div class="navbar-elements">
-                <div class="flights">
-                    <div class="plane-logo">
-                        <img src="/AirLugina/Assets/Images/plane.logo.png" alt="small-plane">
-                    </div>
-                    <div class="flight-name">
-                        <p><a href="/AirLugina/booking.html">Find Flight</a></p>
-                    </div>
-                </div>
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Home</a></p>
-                </div>
-                <div class="logo" id="img-logo">
-                    <img src="/AirLugina/Assets/Images/Air-Lugina-Logo.png" alt="AirLugina-logo">
-                </div>  
-                
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Contact Us</a></p>
-                </div>
-                <div class="user-ctnn">
-                    <div class="user-ctn">
-                        <div class="user-img">
-                            <img src="/AirLugina/assets/Images/user-photo.jpg" alt="User">
-                        </div>
-                        <div class="user-name">
-                            <p>Blend A.</p>
-                        </div>
-                        <div class="arrow-down">
-                            <img src="/AirLugina/assets/Images/arrow-down.png" alt="Arrow">
-                        </div>
-                    </div>
-                    <div class="user-logo">
-                        <div class="dropdown">
-                            <div class="dropdown-ctn">
-                            <img src="/AirLugina/assets/Images/Support.png " alt="logout"><a href="/AirLugina/landingpage.html">Admin Panel</a>
+        <?php include 'navbar.php'; ?>
 
-                            </div>
-                            <div class="dropdown-ctn">
-                                <img src="/AirLugina/assets/Images/logout.png" alt="logout">
-                                <a href="#" id="logout">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="s-upload">
-            <div class="upload">
-                <img src="/AirLugina/Assets/Images/upload-vector.png" alt="upload">
-                <p>Upload Flight Logo</p>
-            </div>
-        </div>
         <div class="form-container">
-            
-            <form action="#">
+            <form action="booking-details.php" method="POST" enctype="multipart/form-data">
+                <div class="s-upload">
+                    <div class="upload">
+                        <img src="Assets/Images/upload-vector.png" alt="upload">
+                        <input type="file" id="flight_logo" name="flight_logo" required>
+                    </div>
+                </div>
+
                 <div class="form-group">
-                    <div class="exp-date">
-                        <fieldset class="fieldseti">
-                            <legend>From</legend>
-                            <input type="text" id="prishtina" name="prishtina" placeholder="Prishtina" required>
-                        </fieldset>
-                    </div>
-                    <div class="cvc">
-                        <fieldset> 
-                            <legend>To</legend>
-                            <input type="text" id="presheva" name="presheva" placeholder="Presheva" required>
-                        </fieldset>
-                    </div>
-                </div>
-                <div class="name-on-card">
-                    <fieldset> 
-                        <legend>Date & Hour</legend>
-                        <input type="datetime" id="datetime" name="datetime" placeholder="28.11.2025" required>
+                    <fieldset class="fieldseti">
+                        <legend>From</legend>
+                        <input type="text" id="prishtina" name="prishtina" placeholder="Prishtina" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>To</legend>
+                        <input type="text" id="presheva" name="presheva" placeholder="Presheva" required>
                     </fieldset>
                 </div>
-                <div class="name-on-card">
-                    <fieldset> 
-                        <legend>Flight Hours</legend>
-                        <input type="text" id="hours" name="hours" placeholder="2 hours 52 minutes" required>
-                    </fieldset>
-                </div>
-                <div class="name-on-card">
-                      <fieldset> 
-                        <legend>Airbus Name</legend>
-                        <input type="text" id="bus-name" name="bus-name" placeholder="Emirates" required>
-                    </fieldset>
-                </div>
-                <div class="name-on-card">
-                    <fieldset> 
-                        <legend>Stock</legend>
-                        <input type="text" id="stock" name="stock" placeholder="21 Tickets" required>
-                    </fieldset>
-                </div>
-                <div class="name-on-card">
-                    <fieldset> 
-                        <legend>Price</legend>
-                        <input type="text" id="price" name="price" placeholder="$112" required>
-                    </fieldset>
-                </div>
+
+                <fieldset id="input-fieldset">
+                    <legend>Date & Hour</legend>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </fieldset>
+
+                <fieldset id="input-fieldset">
+                    <legend>Flight Hours</legend>
+                    <input type="text" id="hours" name="hours" placeholder="2 hours 52 minutes" required>
+                </fieldset>
+
+                <fieldset id="input-fieldset">
+                    <legend>Airbus Name</legend>
+                    <input type="text" id="bus-name" name="bus-name" placeholder="Emirates" required>
+                </fieldset>
+                <fieldset id="input-fieldset">
+                    <legend>Gate</legend>
+                    <input type="number" id="gate" name="gate" placeholder="Gate" required>
+                </fieldset>
+                <fieldset id="input-fieldset">
+                    <legend>Stock</legend>
+                    <input type="number" id="stock" name="stock" placeholder="21 Tickets" required>
+                </fieldset>
+
+                <fieldset id="input-fieldset">
+                    <legend>Price</legend>
+                    <input type="number" step="0.01" id="price" name="price" placeholder="112.00" required>
+                </fieldset>
+
                 <div class="upload-images">
-                    <img src="/AirLugina/Assets/Images/upload-vector.png" alt="upload">
-                    <p>Upload Images</p>
+                    <img src="Assets/Images/upload-vector.png" alt="upload">
+                    <input type="file" id="additional_image" name="additional_image">
                 </div>
-                <button type="submit">Add new ticket</button>
+
+                <button type="submit" id="add-ticket-btn" onclick="window.location.href='booking.php'">Add New Ticket</button>
             </form>
         </div>
-        </div>
     </div>
-    <div class="footer">
-        <div class="lugina-logo">
-            <div class="air-img">
-                <img src="/AirLugina/Assets/Images/AirLugina-footer.png" alt="Air-Lugina">
-            </div>
-            <div class="social-medias">
-                <img src="/AirLugina/Assets/Images/Social-medias.png" alt="Social-Medias">
-            </div>
-        </div>
-        <div class="our-destinations">
-            <h4>Our destinations</h4>
-            <p>Canada</p>
-            <p>Alaska</p>
-            <p>France</p>
-            <p>Iceland</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Our Activities</h4>
-            <p>Northern Lights</p>
-            <p>Cruising & Sailing</p>
-            <p>Multi-Activities</p>
-            <p>Kayaing</p>
-        </div>
 
-        <div class="our-destinations">
-            <h4>Travel Blogs</h4>
-            <p>Bali Travel Guide</p>
-            <p>Sri Lanks Travel Guide</p>
-            <p>Peru Travel Guide</p>
-            <p>Bali Travel Guide</p>
-        </div>
-        <div class="our-destinations">
-            <h4>About Us</h4>
-            <p>Our Story</p>
-            <p>Work with us</p>
-            <p>Destinations</p>
-            <p>Our Journey</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Contact Us</h4>
-            <p>Our Contacts</p>
-            <p>Emails</p>
-            <p>Our staff</p>
-            <p>Connections</p>
-        </div>
-    </div>
-    <script src="/AirLugina/assets/dropdown.js"></script>
+    <?php
+    include 'footer.php';
+    ?>
 </body>
+
 </html>
