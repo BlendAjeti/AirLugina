@@ -1,3 +1,28 @@
+<?php
+$conn = new mysqli('localhost', 'root', '', 'database');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = intval($_GET['id']);
+
+    $sql = "SELECT * FROM tickets WHERE id = $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $ticket = $result->fetch_assoc();
+    } else {
+        echo "Ticket not found.";
+        exit;
+    }
+} else {
+    echo "Invalid ticket ID.";
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,79 +30,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket</title>
-    <link rel="stylesheet" href="/AirLugina/assets/ticket.css">
+    <link rel="stylesheet" href="assets/ticket.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="navbar">
-            <div class="navbar-elements">
-                <div class="flights">
-                    <div class="plane-logo">
-                        <img src="/AirLugina/Assets/Images/plane.logo.png" alt="small-plane">
-                    </div>
-                    <div class="flight-name">
-                        <p><a href="/AirLugina/booking.html">Find Flight</a></p>
-                    </div>
-                </div>
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Home</a></p>
-                </div>
-                <div class="logo" id="img-logo">
-                    <img src="/AirLugina/Assets/Images/Air-Lugina-Logo.png" alt="AirLugina-logo">
-                </div>  
-                
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Contact Us</a></p>
-                </div>
-                <div class="user-ctnn">
-                    <div class="user-ctn">
-                        <div class="user-img">
-                            <img src="/AirLugina/assets/Images/user-photo.jpg" alt="User">
-                        </div>
-                        <div class="user-name">
-                            <p>Blend A.</p>
-                        </div>
-                        <div class="arrow-down">
-                            <img src="/AirLugina/assets/Images/arrow-down.png" alt="Arrow">
-                        </div>
-                    </div>
-                    <div class="user-logo">
-                        <div class="dropdown">
-                            <div class="dropdown-ctn">
-                            <img src="/AirLugina/assets/Images/Support.png " alt="logout"><a href="/AirLugina/landingpage.html">Admin Panel</a>
-
-                            </div>
-                            <div class="dropdown-ctn">
-                                <img src="/AirLugina/assets/Images/logout.png" alt="logout">
-                                <a href="#" id="logout">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <?php
+        include 'navbar.php';
+        ?>
         <div class="direction">
-            <p><span>Turkey > Istanbul</span> > CVC Park Bosphorus Hotel Instanbul</p>
         </div>
         <div class="emirate">
             <div class="airbus">
-                <h2>Emirates A380 Airbus</h2>
+                <h2><?php echo $ticket['airline_name']; ?></h2>
             </div>
             <div class="money">
-                <h2>$240</h2>
+                <h2>$<?php echo $ticket['price']; ?></h2>
             </div>
-
         </div>
         <div class="loc">
-            <img src="/AirLugina/Assets/Images/location-logo.png" alt="location-logo">
-            <p>Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</p>
+            <img src="Assets/Images/location-logo.png" alt="location-logo">
+            <p><?php echo $ticket['origin']; ?> - <?php echo $ticket['destination']; ?></p>
         </div>
+
         <div class="ticket-box">
             <div class="boarding-num">
                 <div class="b-number">
-                    <h3>Blend Ajeti</h3>
+                    <h3><?php echo $_SESSION['username']; ?></h3>
                     <p>Boarding Pass N'123</p>
                 </div>
                 <div class="bussines-class">
@@ -89,159 +68,98 @@
                     <div class="code-container">
                         <div class="date-container">
                             <div class="date-vector">
-                                <img src="/AirLugina/Assets/Images/date-vector.png" alt="date">
+                                <img src="Assets/Images/date-vector.png" alt="date">
                             </div>
                             <div class="date-text">
                                 <h4>Date</h4>
-                                <p>Preshevë(AL)</p>
+                                <p><?php 
+                                    $date = new DateTime($ticket['date_time']); 
+                                    echo $date->format('d.m.Y'); 
+                                ?></p>
                             </div>
                         </div>
                         <div class="date-container">
                             <div class="date-vector">
-                                <img src="/AirLugina/Assets/Images/timee-vector.png" alt="flight-time">
+                                <img src="Assets/Images/timee-vector.png" alt="flight-time">
                             </div>
                             <div class="date-text">
                                 <h4>Flight time</h4>
-                                <p>12:00</p>
+                                <p><?php 
+                                    $date = new DateTime($ticket['date_time']); 
+                                    echo $date->format('h:i A'); 
+                                ?></p>
                             </div>
                         </div>
                         <div class="date-container">
                             <div class="date-vector">
-                                <img src="/AirLugina/Assets/Images/gate-vector.png" alt="gate">
+                                <img src="Assets/Images/gate-vector.png" alt="gate">
                             </div>
                             <div class="date-text">
                                 <h4>Gate</h4>
-                                <p>A12</p>
-                            </div>
-                        </div>
-                        <div class="date-container">
-                            <div class="date-vector">
-                                <img src="/AirLugina/Assets/Images/seat-vector.png" alt="seat">
-                            </div>
-                            <div class="date-text">
-                                <h4>Seat</h4>
-                                <p>128</p>
+                                <p><?php echo $ticket['gate']; ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="class-2">
-                    <div class="ek">
-                        <div class="abc">
-                            <h1>EK</h1>
-                            <p>ABC12345</p>
-                        </div>
-                    </div>
                     <div class="time">
                         <div class="estimated-time">
-                            <h1>12:00pm</h1>
-                            <p>Preshevë(AL)</p>
+                            <h1><?php
+                            $date = new DateTime($ticket['date_time']); 
+                            echo $date->format('h:i A'); 
+                            ?></h1>
+                            <p><?php echo $ticket['origin']; ?></p>
                         </div>
                         <div class="img">
-                            <img src="/AirLugina/Assets/Images/estimated-plane.png" alt="plane">
+                            <img src="Assets/Images/estimated-plane.png" alt="plane">
                         </div>
                         <div class="estimated-time">
-                            <h1>10:00pm</h1>
-                            <p>Geneva(SUI)</p>
+                            <h1><?php 
+                                $departure_time = new DateTime($ticket['date_time']);
+                                $departure_time->modify("+" . $ticket['flight_duration'] . " hour");
+                                echo $departure_time->format('h:i A');
+                            ?></h1>
+                            <p><?php echo $ticket['destination']; ?></p>
                         </div>
                     </div>
                     <div class="code">
-                        <img src="/AirLugina/Assets/Images/qr-code.png" alt="code">
+                        <img src="Assets/Images/qr-code.png" alt="code">
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="terms">
             <div class="conditions">
-                <h2>
-                    Terms and Conditions
-                </h2>
+                <h2>Terms and Conditions</h2>
             </div>
             <div class="payments">
                 <h2>Payments</h2>
                 <ul>
                     <li>If you are purchasing your ticket using a debit or credit card via the Website, we will process
                         these payments via the automated secure common payment gateway which will be subject to fraud
-                        screening purposes. </li>
+                        screening purposes.</li>
                     <li>If you do not supply the correct card billing address and/or cardholder information, your
-                        booking will not be confirmed and the overall cost may increase. We reserve the right to cancel
-                        your booking if payment is declined for any reason or if you have supplied incorrect card
-                        information. If we become aware of, or is notified of, any fraud or illegal activity associated
-                        with the payment for the booking, the booking will be cancelled and you will be liable for all
-                        costs and expenses arising from such cancellation, without prejudice to any action that may be
-                        taken against us.</li>
+                        booking will not be confirmed and the overall cost may increase.</li>
                     <li>Golobe may require the card holder to provide additional payment verification upon request by
-                        either submitting an online form or visiting the nearest Golobe office, or at the airport at the
-                        time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment
-                        (in cash or from another credit card) if the card originally used for the purchase cannot be
-                        presented by the cardholder at check-in or when collecting the tickets, or in the case the
-                        original payment has been withheld or disputed by the card issuing bank. Credit card details are
-                        held in a secured environment and transferred through an internationally accepted system.</li>
+                        either submitting an online form or visiting the nearest Golobe office.</li>
                 </ul>
             </div>
             <div class="contact-us">
                 <h2>Contact us</h2>
                 <p>If you have any questions about our Website or our Terms of Use, please contact: </p>
-                <p>
-                    Golobe Group Q.C.S.C
-                </p>
-                <p>Golobe Tower</p>
-                <p>P.O. Box: 22550</p>
-                <p>Doha, State of Qatar</p>
-                <p>Further contact details can be found at golobe.com/help</p>
+                <p>AirLugina</p>
+                <p>Prishtine - Presheve</p>
+                <p>info@airlugina.com</p>
+                <p>+383 222 444</p>
+                <p>Further contact details can be found at focused-studio.com</p>
             </div>
         </div>
-        <div class="space">
-
-        </div>
+        <div class="space"></div>
     </div>
-    <div class="footer">
-        <div class="lugina-logo">
-            <div class="air-img">
-                <img src="/AirLugina/Assets/Images/AirLugina-footer.png" alt="Air-Lugina">
-            </div>
-            <div class="social-medias">
-                <img src="/AirLugina/Assets/Images/Social-medias.png" alt="Social-Medias">
-            </div>
-        </div>
-        <div class="our-destinations">
-            <h4>Our destinations</h4>
-            <p>Canada</p>
-            <p>Alaska</p>
-            <p>France</p>
-            <p>Iceland</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Our Activities</h4>
-            <p>Northern Lights</p>
-            <p>Cruising & Sailing</p>
-            <p>Multi-Activities</p>
-            <p>Kayaing</p>
-        </div>
 
-        <div class="our-destinations">
-            <h4>Travel Blogs</h4>
-            <p>Bali Travel Guide</p>
-            <p>Sri Lanks Travel Guide</p>
-            <p>Peru Travel Guide</p>
-            <p>Bali Travel Guide</p>
-        </div>
-        <div class="our-destinations">
-            <h4>About Us</h4>
-            <p>Our Story</p>
-            <p>Work with us</p>
-            <p>Destinations</p>
-            <p>Our Journey</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Contact Us</h4>
-            <p>Our Contacts</p>
-            <p>Emails</p>
-            <p>Our staff</p>
-            <p>Connections</p>
-        </div>
-    </div>
-    <script src="/AirLugina/assets/dropdown.js"></script>
+    <?php include 'footer.php'; ?>
 
 </body>
 
