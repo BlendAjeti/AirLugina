@@ -1,0 +1,90 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+
+
+
+.footer{
+    width: 100%;
+    height: 282px;
+    background-color:#F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.our-destinations{
+    font-family: ClashDisplay-Regular;
+}
+.our-destinations h4{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 10px;
+}
+.our-destinations p{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 5px;
+}
+.lugina-logo{
+    text-align: center;
+    font-family: ClashDisplay-Regular;
+
+}
+.lugina-logo img{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width : 767px){
+    
+    .footer{
+        height: 100%;
+        width: 100%;
+
+    }
+    .our-destinations{
+        
+        display: none;
+    }
+    .our-destinations h4{
+        display: none;
+    }
+    .our-destinations p{
+        display: none;
+    }
+    .air-img img{
+        width: 140px;
+        padding-bottom: 10px;
+
+    }
+    .social-medias img{
+        width: 140px;
+    }
+    .lugina-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
