@@ -1,0 +1,113 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+
+@font-face{
+    font-family: TradeGothic;
+    src: url(Fonts/trade-gothic-lt-1361519976.ttf);
+}
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url(Fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face{
+    font-family: Montserrat-Medium;
+    src: url(Fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face{
+    font-family: Montserrat-Regular;
+    src: url(Fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face{
+    font-family: Montserrat-Semibold;
+    src: url(Fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+*{
+    overflow: hidden;
+
+}
+
+body {
+    font-family: Montserrat-Regular;
+
+    /* margin: 20px; */
+}
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: aliceblue;
+}
+
+form input{
+    font-family: Montserrat-Regular;
+
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #FF3D00;
+    color: aliceblue;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    height: 282px;
+    background-color:#F3F3F3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.our-destinations{
+    font-family: ClashDisplay-Regular;
+}
+.our-destinations h4{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 10px;
+}
+.our-destinations p{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 5px;
+}
+.lugina-logo img{
+    font-family: ClashDisplay-Regular;
+    padding-bottom: 20px;
+}
+.space{
+    height: 200px;
+}
