@@ -1,32 +1,33 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
 }
 
 *{
     margin:0;
     padding: 0;
     /* font-family: ClashDisplay-Regular; */
+
 }
 
 body{
@@ -170,6 +171,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -239,6 +241,18 @@ body{
     border: none;  
 }
 
+#input-fieldset input{
+    width: 95%;
+    border: none;
+    padding: 12px;
+    background-color:#fafbfc;
+    font-family: ClashDisplay-Regular;
+}
+
+#input-fieldset input:focus{
+    outline: none;
+}
+
 .name-on-card fieldset{
     width: 100%;
     display: flex;
@@ -270,13 +284,24 @@ body{
     font-family: ClashDisplay-Semibold;
     margin: 10px 0 20px 0;
 }
+
+.form-container form button:hover{
+    background-color: #ff5722;
+    cursor: pointer;
+}
+
 .name-on-card input:focus{
     outline: none; 
     border: none;    
 }
 
+
+
+
+
 .upload-images{
-    width: 625px;
+    /* width: 625px; */
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,6 +313,13 @@ body{
     font-family: ClashDisplay-Semibold;
     margin: 20px 0;
     
+}
+
+.upload-images  input::file-selector-button{
+    border: none;
+    background-color: transparent !important;
+    font-family: ClashDisplay-Regular;
+    outline: none;
 }
 .upload-images img{
     padding-right: 10px;
@@ -314,18 +346,27 @@ fieldset legend{
 }
 
 .upload{
-    margin: 100px 0 30px 0;
-    /* margin-left: 533px; */
+    margin: 50px 0 30px 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color:#8DD3BB ;
-    width: 189px;
-    height: 48px;
     font-family: ClashDisplay-Regular;
     border-radius:4px ;
+    padding: 10px 15px;
 }
+.upload input{
+    margin-right: -10%;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
 
+}
+.upload  input::file-selector-button{
+    border: none;
+    background-color: transparent !important;
+    outline: none;
+}
 .upload img{
     padding: 0 8px;
 }
@@ -354,6 +395,57 @@ fieldset legend{
     font-family: ClashDisplay-Regular;
     padding-bottom: 20px;
 }
+
+
+/* Stilizimi alertit osht ktu*/
+.hidden {
+    display: none;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fonde i zi transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.custom-alert-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.custom-alert-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.custom-alert-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-alert-content button:hover {
+    background-color: #45a049;
+}
+/*Dhe perfundon ktu*/
+
+
+
+
 
 @media only screen 
 and (max-width : 767px){
@@ -391,7 +483,6 @@ and (max-width : 767px){
     }
 
     .form-container{
-        width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -434,19 +525,11 @@ and (max-width : 767px){
         width: 50%;
     }
 
-    .upload-images{
-        width: 96%;
-    }
+    
 
     .form-container form button{
         width: 100%;
     }
-
-    
-
-
-
-
     
     .space{
         display: none;
@@ -485,5 +568,22 @@ and (max-width : 767px){
         align-items: center;
         padding-top: 20px;
     }
+}
+
+@media only screen 
+and (max-width : 530px){
+    #input-fieldset input{
+        width: 90%;
+        border: none;
+        padding: 12px;
+        background-color:#fafbfc;
+        font-family: ClashDisplay-Regular;
+    }
+    .upload{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
 }
 
