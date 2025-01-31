@@ -1,0 +1,325 @@
+@font-face {
+    font-family: ClashDisplay-Regular;
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Bold;
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Extralight;
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Light;
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
+}
+@font-face {
+    font-family: ClashDisplay-Medium;
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
+}
+@font-face {
+    font-family: ClashDisplay-SemiBold;
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
+}
+.navbar{
+    /* margin: 15px 104px; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    height: 87px; 
+}
+.navbar-elements{
+    margin: 0 104px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo img{
+    width: 195px;
+    height: 49px;
+}
+.home a{
+    text-decoration: none;
+    color: black;
+    font-family: ClashDisplay-Semibold;
+}
+
+.home a:hover{
+    border-bottom: 1px solid #FF3D00;
+}
+
+.menu-toggle{
+    display: none;
+}
+.menu-toggle img{
+    display: none;
+}
+
+.flights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flights:hover{
+    border-bottom: 1px solid #FF3D00;
+    
+}
+
+.flight-name{
+    padding-left: 5px;
+    font-family: ClashDisplay-SemiBold;
+}
+.flight-name a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.user-ctnn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: margin-top 0.3s ease; 
+}
+
+.user-ctnn.active {
+    margin-top: 90px;
+}
+
+
+
+
+button.sig{
+    background-color: transparent;
+    color: rgb(25, 35, 44);
+    border: 1px solid black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: ClashDisplay-Medium;
+    
+  }
+ 
+  button.sig:hover {
+    background-color: #FF3D00;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: ClashDisplay-Medium;
+
+  } 
+  
+  .log{
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: #FF3D00;
+    font-family: ClashDisplay-Medium;
+
+  }
+  
+  .log:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+  }
+ 
+
+.user-ctn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: ClashDisplay-Regular;
+    position: relative;
+    width: 100%;
+}
+
+.user-img img {
+    margin-right: 10px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.arrow-down img {
+    width: 20px;
+    padding-top: 3px;
+}
+
+.user-logo {
+    display: none; 
+}
+
+.dropdown-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.user-logo .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-family: ClashDisplay-Regular;
+    color: black;
+    padding: 8px;
+}
+
+
+.dropdown #logout {
+    color: #FF8682;
+}
+
+
+.menu-ctn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+
+
+.dropdown-second {
+    display: none; 
+    position: absolute;
+    top: 60px; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+
+.dropdown-second ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-second ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.dropdown-second ul li a {
+    text-decoration: none;
+    font-family: ClashDisplay-Regular;
+    color: black;
+    padding: 8px;
+}
+
+#login-signup a{
+    color: #FF3D00 !important;
+}
+
+.dropdown-second ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+.dropdown-second.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width:850px) {
+
+
+
+    .navbar{
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar-elements{
+        max-width: 850px;
+        margin: 0;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .menu-ctn{
+        display: flex;
+        margin-left: 20px;
+    }
+
+
+    .buttons{
+        display: none;
+    }
+
+    .plane-logo{
+        display: none;
+    }
+
+    .flight-name{
+        display: none;
+    }
+
+    .home{
+        display: none;
+    }
+
+    .user-name{
+        display: none;
+    }
+    .arrow-down{
+        display: none;
+    }
+
+    .user-ctn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+    }
+
+    .user-ctnn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: none;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+    .menu-toggle img{
+        display: block;
+        width: 35px;
+    }
+
+   
+
+
+}
+
