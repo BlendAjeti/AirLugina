@@ -1,32 +1,31 @@
 @font-face {
     font-family: ClashDisplay-Regular;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Regular.otf);
+    src: url(Fonts/OTF/ClashDisplay-Regular.otf);
 }
 @font-face {
     font-family: ClashDisplay-Bold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Bold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Bold.otf);
 }
 @font-face {
     font-family: ClashDisplay-Extralight;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Extralight.otf);
+    src: url(Fonts/OTF/ClashDisplay-Extralight.otf);
 }
 @font-face {
     font-family: ClashDisplay-Light;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Light.otf);
+    src: url(Fonts/OTF/ClashDisplay-Light.otf);
 }
 @font-face {
     font-family: ClashDisplay-Medium;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Medium.otf);
+    src: url(Fonts/OTF/ClashDisplay-Medium.otf);
 }
 @font-face {
     font-family: ClashDisplay-SemiBold;
-    src: url(/AirLugina/Assets/Fonts/OTF/ClashDisplay-Semibold.otf);
+    src: url(Fonts/OTF/ClashDisplay-Semibold.otf);
 }
-
 *{
     margin:0;
     padding: 0;
-    /* font-family: ClashDisplay-Regular; */
+
 }
 
 body{
@@ -225,7 +224,6 @@ body{
 }
 
 .big-plane img{
-    /* width: 2120px; */
     width: 100%;
 }
 
@@ -239,8 +237,6 @@ body{
 }
 
 .grid-container{
-    /* display: grid;
-    grid-template-columns: repeat(9, 1fr); */
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
@@ -285,11 +281,12 @@ body{
 }
 
 .date{
+    border-radius: 8px;
     margin: 10px 0;
     background-color: #ffffff;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -595,9 +592,9 @@ body{
         width: 90%;
         margin: 0;
         background-color: #ffffff;
-        -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-        -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
-        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.63);
+        -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
     
     .date-ctn{
