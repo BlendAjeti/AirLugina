@@ -1,382 +1,163 @@
+<?php
+$conn = new mysqli('localhost', 'root', '', 'database');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Capture form inputs
+$origin = isset($_GET['from']) ? $_GET['from'] : '';
+$destination = isset($_GET['to']) ? $_GET['to'] : '';
+$depart = isset($_GET['depart']) ? $_GET['depart'] : '';
+$return = isset($_GET['return']) ? $_GET['return'] : '';
+
+// Build the query
+$query = "SELECT * FROM tickets";
+$params = [];
+if (!empty($origin) && !empty($destination)) {
+    $query .= " WHERE origin = ? AND destination = ?";
+    $params[] = $origin;
+    $params[] = $destination;
+
+    if (!empty($depart)) {
+        $query .= " AND date_time >= ?";
+        $params[] = $depart;
+    }
+
+    if (!empty($return)) {
+        $query .= " AND date_time <= ?";
+        $params[] = $return;
+    }
+}
+
+// Prepare and execute the query
+$stmt = $conn->prepare($query);
+if ($params) {
+    $stmt->bind_param(str_repeat('s', count($params)), ...$params);
+}
+$stmt->execute();
+$result = $stmt->get_result();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <link rel="stylesheet" href="/AirLugina/Assets/booking.css">
+    <link rel="stylesheet" href="assets/booking.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="navbar">
-            <div class="navbar-elements">
-                <div class="flights">
-                    <div class="plane-logo">
-                        <img src="/AirLugina/Assets/Images/plane.logo.png" alt="small-plane">
-                    </div>
-                    <div class="flight-name">
-                        <p><a href="/AirLugina/booking.html">Find Flight</a></p>
-                    </div>
-                </div>
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Home</a></p>
-                </div>
-                <div class="logo" id="img-logo">
-                    <img src="/AirLugina/Assets/Images/Air-Lugina-Logo.png" alt="AirLugina-logo">
-                </div>  
-                
-                <div class="home">
-                    <p><a href="/AirLugina/landingpage.html">Contact Us</a></p>
-                </div>
-                <div class="user-ctnn">
-                    <div class="user-ctn">
-                        <div class="user-img">
-                            <img src="/AirLugina/assets/Images/user-photo.jpg" alt="User">
-                        </div>
-                        <div class="user-name">
-                            <p>Blend A.</p>
-                        </div>
-                        <div class="arrow-down">
-                            <img src="/AirLugina/assets/Images/arrow-down.png" alt="Arrow">
-                        </div>
-                    </div>
-                    <div class="user-logo">
-                        <div class="dropdown">
-                            <div class="dropdown-ctn">
-                            <img src="/AirLugina/assets/Images/Support.png " alt="logout"><a href="/AirLugina/landingpage.html">Admin Panel</a>
+        <?php include 'navbar.php'; ?>
 
-                            </div>
-                            <div class="dropdown-ctn">
-                                <img src="/AirLugina/assets/Images/logout.png" alt="logout">
-                                <a href="#" id="logout">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <!-- Search Form -->
         <div class="depart">
-            <form action="#">
+            <form action="booking.php" method="GET">
                 <div class="trip-1">
-                    <fieldset> 
+                    <fieldset>
                         <legend>From</legend>
-                         <select id="return" name="return" required>
-                        <option value="Preshevë">Preshevë</option>
-                        <option value="canada">Prishtinë</option>
-                        <option value="uk">Tiran</option>
-                        <option value="other">Other</option>
+                        <select id="from" name="from">
+                            <option value="" <?= empty($origin) ? 'selected' : '' ?>>Select Origin</option>
+                            <option value="Geneva" <?= $origin === 'Geneva' ? 'selected' : '' ?>>Geneva</option>
+                            <option value="Stamboll" <?= $origin === 'Stamboll' ? 'selected' : '' ?>>Stamboll</option>
+                            <option value="Paris" <?= $origin === 'Paris' ? 'selected' : '' ?>>Paris</option>
+                            <option value="Burrel" <?= $origin === 'Burrel' ? 'selected' : '' ?>>Burrel</option>
                         </select>
                     </fieldset>
                 </div>
                 <div class="trip-1">
-                    <fieldset> 
+                    <fieldset>
                         <legend>To</legend>
-                         <select id="return" name="return" required>
-                        <option value="Return">Geneve</option>
-                        <option value="canada">Dubai</option>
-                        <option value="uk">Medine</option>
-                        <option value="other">Other</option>
+                        <select id="to" name="to">
+                            <option value="" <?= empty($destination) ? 'selected' : '' ?>>Select Destination</option>
+                            <option value="Geneva" <?= $destination === 'Geneva' ? 'selected' : '' ?>>Geneva</option>
+                            <option value="Stamboll" <?= $destination === 'Stamboll' ? 'selected' : '' ?>>Stamboll</option>
+                            <option value="Paris" <?= $destination === 'Paris' ? 'selected' : '' ?>>Paris</option>
+                            <option value="Burrel" <?= $destination === 'Burrel' ? 'selected' : '' ?>>Burrel</option>
                         </select>
                     </fieldset>
                 </div>
                 <div class="depart-return">
                     <fieldset>
                         <legend>Depart</legend>
-                        <input type="date" id="depart" name="depart">
+                        <input type="datetime-local" id="depart" name="depart" value="<?= htmlspecialchars($depart) ?>">
                     </fieldset>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <fieldset class="depart-return">
                         <legend>Return</legend>
-                        <input type="date" id="return" name="return">
-                    </fieldset>
-                  </div>
-                <div class="passanger">
-                    <fieldset>
-                        <legend> Passanger - Class </legend>
-                        <input type="text" id="passanger" name="passanger" placeholder="1 Passenger,Economy" required>
+                        <input type="datetime-local" id="return" name="return" value="<?= htmlspecialchars($return) ?>">
                     </fieldset>
                 </div>
                 <div class="search">
-                    <button><img src="/AirLugina/Assets/Images/search-vector.png" alt="search"></button>
+                    <button type="submit"><img src="Assets/Images/search-vector.png" alt="search"></button>
                 </div>
             </form>
         </div>
-        <div class="emirates">
-            <div class="emirate-img">
-                <img src="/AirLugina/Assets/Images/emirates.png" alt="emirate">
-            </div>
-            <div class="very-good">
-                <div class="ctn">
-                    <div class="reviews">
-                        <div class="numbers">
-                            <p>4.2</p>
-                        </div>
-                        <div class="paragraf">
-                            <p><span>Very Good</span> 54 reviews</p>
-                        </div>
-                    </div>
-                    <div class="second-ctn">
-                        <div class="p">
-                            <p>starting from</p>
-                        </div>
-                        <div class="price">
-                            <p>$104</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nonstop">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="nonstop-2">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="bord">
 
-                </div>
-                <div class="details-btn">
-                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="emirates">
-            <div class="emirate-img">
-                <img src="/AirLugina/Assets/Images/dubai.png" alt="emirate">
-            </div>
-            <div class="very-good">
-                <div class="ctn">
-                    <div class="reviews">
-                        <div class="numbers">
-                            <p>4.2</p>
-                        </div>
-                        <div class="paragraf">
-                            <p><span>Very Good</span> 54 reviews</p>
-                        </div>
+        <!-- Flight Results -->
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $date = new DateTime($row['date_time']);
+                $formattedDate = $date->format('h:i A - d.m.Y');
+                echo "
+                <div class='emirates'>
+                    <div class='emirate-img'>
+                        <img src='" . $row['flight_logo'] . "' alt='emirate'>
                     </div>
-                    <div class="second-ctn">
-                        <div class="p">
-                            <p>starting from</p>
+                    <div class='very-good'>
+                        <div class='ctn'>
+                            <div class='reviews'>
+                                <div class='numbers'>
+                                    <p>4.2</p>
+                                </div>
+                                <div class='paragraf'>
+                                    <p><span>Very Good</span> 54 reviews</p>
+                                </div>
+                            </div>
+                            <div class='second-ctn'>
+                                <div class='p'>
+                                    <p>starting from</p>
+                                </div>
+                                <div class='price'>
+                                    <p>$" . $row['price'] . "</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="price">
-                            <p>$104</p>
+                        <div class='nonstop'>
+                            <div class='emi'>
+                                <p><span>$formattedDate</span></p>
+                                <p class='pa'>" . $row['airline_name'] . "</p>
+                            </div>
+                            <p class='pad'>non stop</p>
+                            <div class='EWR'>
+                                <p><span>" . $row['flight_duration'] . " Hours</span></p>
+                                <p>" . $row['origin'] . "-" . $row['destination'] . "</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="nonstop">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="nonstop-2">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="bord">
-                    
-                </div>
-                <div class="details-btn">
-                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="emirates">
-            <div class="emirate-img">
-                <img src="/AirLugina/Assets/Images/qatar.png" alt="emirate">
-            </div>
-            <div class="very-good">
-                <div class="ctn">
-                    <div class="reviews">
-                        <div class="numbers">
-                            <p>4.2</p>
-                        </div>
-                        <div class="paragraf">
-                            <p><span>Very Good</span> 54 reviews</p>
-                        </div>
-                    </div>
-                    <div class="second-ctn">
-                        <div class="p">
-                            <p>starting from</p>
-                        </div>
-                        <div class="price">
-                            <p>$104</p>
+                        <div class='details-btn'>
+                            <button><a href='arrives.php?id=" . $row['id'] . "'>View Deals</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="nonstop">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="nonstop-2">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="bord">
-                    
-                </div>
-                <div class="details-btn">
-                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="emirates">
-            <div class="emirate-img">
-                <img src="/AirLugina/Assets/Images/etihad.png" alt="emirate">
-            </div>
-            <div class="very-good">
-                <div class="ctn">
-                    <div class="reviews">
-                        <div class="numbers">
-                            <p>4.2</p>
-                        </div>
-                        <div class="paragraf">
-                            <p><span>Very Good</span> 54 reviews</p>
-                        </div>
-                    </div>
-                    <div class="second-ctn">
-                        <div class="p">
-                            <p>starting from</p>
-                        </div>
-                        <div class="price">
-                            <p>$104</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nonstop">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="nonstop-2">
-                    <input type="checkbox">
-                    <div class="emi">
-                        <p><span>12:00 pm - 01:28 pm</span></p>
-                        <p class="pa">Emirates</p>
-                    </div>
-                    <p class="pad">non stop</p>
-                    <div class="EWR">
-                        <p><span>2h28m</span></p>
-                        <p>EWR-BNA</p>
-                    </div>
-                </div>
-                <div class="bord">
-                    
-                </div>
-                <div class="details-btn">
-                    <button><a href="/AirLugina/arrives.html">View Deals</a></button>
-                </div>
-            </div>
-        </div>
+                ";
+            }
+        } else {
+            echo "<div class='no-flights'>
+                        <p class='error-red'>No flights available.</p>
+                  </div>";
+        }
+        ?>
+
         <div class="results">
-            <button>Show more results</button>
+            <button id="show-more">Show more results</button>
         </div>
-        <div class="space">
-
-        </div>
+        <div class="space"></div>
     </div>
-    <div class="footer">
-        <div class="lugina-logo">
-            <div class="air-img">
-                <img src="/AirLugina/Assets/Images/AirLugina-footer.png" alt="Air-Lugina">
-            </div>
-            <div class="social-medias">
-                <img src="/AirLugina/Assets/Images/Social-medias.png" alt="Social-Medias">
-            </div>
-        </div>
-        <div class="our-destinations">
-            <h4>Our destinations</h4>
-            <p>Canada</p>
-            <p>Alaska</p>
-            <p>France</p>
-            <p>Iceland</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Our Activities</h4>
-            <p>Northern Lights</p>
-            <p>Cruising & Sailing</p>
-            <p>Multi-Activities</p>
-            <p>Kayaing</p>
-        </div>
-
-        <div class="our-destinations">
-            <h4>Travel Blogs</h4>
-            <p>Bali Travel Guide</p>
-            <p>Sri Lanks Travel Guide</p>
-            <p>Peru Travel Guide</p>
-            <p>Bali Travel Guide</p>
-        </div>
-        <div class="our-destinations">
-            <h4>About Us</h4>
-            <p>Our Story</p>
-            <p>Work with us</p>
-            <p>Destinations</p>
-            <p>Our Journey</p>
-        </div>
-        <div class="our-destinations">
-            <h4>Contact Us</h4>
-            <p>Our Contacts</p>
-            <p>Emails</p>
-            <p>Our staff</p>
-            <p>Connections</p>
-        </div>
-    </div>
-    <script src="/AirLugina/assets/dropdown.js"></script>
-
+    <?php include 'footer.php'; ?>
 </body>
+
 </html>
